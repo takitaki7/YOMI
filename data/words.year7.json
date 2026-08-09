@@ -1,0 +1,7 @@
+[
+  { "kana": ["け", "い", "け", "ん"], "romaji": "keiken", "mean": "experience", "cat": "Abstract", "emoji": "", "exJp": "いい けいけんに なった。", "exTr": "It became a good experience." },
+  { "kana": ["せ", "い", "か", "つ"], "romaji": "seikatsu", "mean": "daily life", "cat": "Abstract", "emoji": "", "exJp": "せいかつが かわった。", "exTr": "My life changed." },
+  { "kana": ["か", "ん", "け", "い"], "romaji": "kankei", "mean": "relationship", "cat": "Abstract", "emoji": "", "exJp": "いい かんけいを つくる。", "exTr": "I build a good relationship." },
+  { "kana": ["よ", "そ", "う"], "romaji": "yosō", "mean": "prediction", "cat": "Abstract", "emoji": "", "exJp": "よそうが あたる。", "exTr": "The prediction comes true." },
+  { "kana": ["き", "か", "い"], "romaji": "kikai", "mean": "opportunity", "cat": "Abstract", "emoji": "", "exJp": "いい きかいだ。", "exTr": "It's a good opportunity." }
+]

@@ -1,0 +1,7 @@
+[
+  { "kana": ["え", "い", "き", "ょ", "う"], "romaji": "eikyō", "mean": "influence", "cat": "Abstract", "emoji": "", "exJp": "おおきな えいきょうが ある。", "exTr": "It has a big influence." },
+  { "kana": ["か", "い", "け", "つ"], "romaji": "kaiketsu", "mean": "solution", "cat": "Abstract", "emoji": "", "exJp": "もんだいを かいけつする。", "exTr": "I solve the problem." },
+  { "kana": ["せ", "き", "に", "ん"], "romaji": "sekinin", "mean": "responsibility", "cat": "Abstract", "emoji": "", "exJp": "せきにんを もつ。", "exTr": "I take responsibility." },
+  { "kana": ["は", "ん", "だ", "ん"], "romaji": "handan", "mean": "judgement / decision", "cat": "Abstract", "emoji": "", "exJp": "はんだんが はやい。", "exTr": "The decision is quick." },
+  { "kana": ["よ", "う", "き", "ゅ", "う"], "romaji": "yōkyū", "mean": "demand / request", "cat": "Abstract", "emoji": "", "exJp": "ようきゅうに こたえる。", "exTr": "I meet the demand." }
+]

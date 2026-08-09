@@ -1,0 +1,7 @@
+[
+  { "kana": ["む", "じ", "ゅ", "ん"], "romaji": "mujun", "mean": "contradiction", "cat": "Abstract", "emoji": "", "exJp": "はなしに むじゅんが ある。", "exTr": "There's a contradiction in the story." },
+  { "kana": ["よ", "ゆ", "う"], "romaji": "yoyū", "mean": "leeway / composure", "cat": "Abstract", "emoji": "", "exJp": "じかんに よゆうが ある。", "exTr": "There's time to spare." },
+  { "kana": ["か", "く", "ご"], "romaji": "kakugo", "mean": "resolve / readiness", "cat": "Abstract", "emoji": "", "exJp": "かくごを きめる。", "exTr": "I steel my resolve." },
+  { "kana": ["い", "よ", "く"], "romaji": "iyoku", "mean": "motivation / drive", "cat": "Abstract", "emoji": "", "exJp": "いよくが わく。", "exTr": "Motivation wells up." },
+  { "kana": ["か", "ん", "か", "く"], "romaji": "kankaku", "mean": "sense / intuition", "cat": "Abstract", "emoji": "", "exJp": "かんかくが するどい。", "exTr": "The intuition is sharp." }
+]

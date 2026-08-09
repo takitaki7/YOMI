@@ -1,0 +1,16 @@
+[
+  { "kana": ["み", "ず"], "romaji": "mizu", "mean": "water", "cat": "Nature", "emoji": "💧", "exJp": "みずを ください。", "exTr": "Water, please." },
+  { "kana": ["ご", "は", "ん"], "romaji": "gohan", "mean": "rice / meal", "cat": "Food & drink", "emoji": "🍚", "exJp": "ごはんを たべる。", "exTr": "I eat a meal." },
+  { "kana": ["た", "ま", "ご"], "romaji": "tamago", "mean": "egg", "cat": "Food & drink", "emoji": "🥚", "exJp": "たまごを たべる。", "exTr": "I eat an egg." },
+  { "kana": ["か", "ば", "ん"], "romaji": "kaban", "mean": "bag", "cat": "Things", "emoji": "👜", "exJp": "かばんが おもい。", "exTr": "The bag is heavy." },
+  { "kana": ["て", "が", "み"], "romaji": "tegami", "mean": "letter", "cat": "Things", "emoji": "✉️", "exJp": "てがみを かく。", "exTr": "I write a letter." },
+  { "kana": ["ぱ", "ん"], "romaji": "pan", "mean": "bread", "cat": "Food & drink", "emoji": "🍞", "exJp": "ぱんを たべる。", "exTr": "I eat bread." },
+  { "kana": ["か", "ぞ", "く"], "romaji": "kazoku", "mean": "family", "cat": "People", "emoji": "👨‍👩‍👧", "exJp": "かぞくが だいすき。", "exTr": "I love my family." },
+  { "kana": ["で", "ん", "わ"], "romaji": "denwa", "mean": "telephone", "cat": "Things", "emoji": "📞", "exJp": "でんわを かける。", "exTr": "I make a phone call." },
+  { "kana": ["ま", "ど"], "romaji": "mado", "mean": "window", "cat": "Things", "emoji": "🪟", "exJp": "まどを あける。", "exTr": "I open the window." },
+  { "kana": ["か", "ぎ"], "romaji": "kagi", "mean": "key", "cat": "Things", "emoji": "🔑", "exJp": "かぎを なくす。", "exTr": "I lose my key." },
+  { "kana": ["え", "い", "が"], "romaji": "eiga", "mean": "movie", "cat": "Daily life", "emoji": "🎬", "exJp": "えいがを みる。", "exTr": "I watch a movie." },
+  { "kana": ["く", "だ", "も", "の"], "romaji": "kudamono", "mean": "fruit", "cat": "Food & drink", "emoji": "🍎", "exJp": "くだものが あまい。", "exTr": "The fruit is sweet." },
+  { "kana": ["や", "さ", "い"], "romaji": "yasai", "mean": "vegetable", "cat": "Food & drink", "emoji": "🥬", "exJp": "やさいを きる。", "exTr": "I cut the vegetables." },
+  { "kana": ["ど", "う", "ぶ", "つ"], "romaji": "dōbutsu", "mean": "animal", "cat": "Animal", "emoji": "🐾", "exJp": "どうぶつが すき。", "exTr": "I like animals." }
+]

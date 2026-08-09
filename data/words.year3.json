@@ -1,0 +1,12 @@
+[
+  { "kana": ["お", "ち", "ゃ"], "romaji": "ocha", "mean": "tea", "cat": "Food & drink", "emoji": "🍵", "exJp": "おちゃを のむ。", "exTr": "I drink tea." },
+  { "kana": ["き", "っ", "ぷ"], "romaji": "kippu", "mean": "ticket", "cat": "Things", "emoji": "🎫", "exJp": "きっぷを かう。", "exTr": "I buy a ticket." },
+  { "kana": ["し", "ゃ", "し", "ん"], "romaji": "shashin", "mean": "photo", "cat": "Things", "emoji": "📷", "exJp": "しゃしんを とる。", "exTr": "I take a photo." },
+  { "kana": ["が", "っ", "こ", "う"], "romaji": "gakkō", "mean": "school", "cat": "Daily life", "emoji": "🏫", "exJp": "がっこうへ いく。", "exTr": "I go to school." },
+  { "kana": ["ぎ", "ゅ", "う", "に", "く"], "romaji": "gyūniku", "mean": "beef", "cat": "Food & drink", "emoji": "🥩", "exJp": "ぎゅうにくを やく。", "exTr": "I grill the beef." },
+  { "kana": ["じ", "て", "ん", "し", "ゃ"], "romaji": "jitensha", "mean": "bicycle", "cat": "Things", "emoji": "🚲", "exJp": "じてんしゃに のる。", "exTr": "I ride a bicycle." },
+  { "kana": ["び", "ょ", "う", "い", "ん"], "romaji": "byōin", "mean": "hospital", "cat": "Places", "emoji": "🏥", "exJp": "びょういんへ いく。", "exTr": "I go to the hospital." },
+  { "kana": ["じ", "ゅ", "う", "し", "ょ"], "romaji": "jūsho", "mean": "address", "cat": "Daily life", "emoji": "📮", "exJp": "じゅうしょを かく。", "exTr": "I write the address." },
+  { "kana": ["き", "ょ", "う"], "romaji": "kyō", "mean": "today", "cat": "Time", "emoji": "📅", "exJp": "きょうは あつい。", "exTr": "Today is hot." },
+  { "kana": ["り", "ょ", "う", "り"], "romaji": "ryōri", "mean": "cooking / cuisine", "cat": "Food & drink", "emoji": "🍳", "exJp": "りょうりを する。", "exTr": "I cook." }
+]
