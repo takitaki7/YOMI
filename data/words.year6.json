@@ -1,0 +1,12 @@
+[
+  { "kana": ["ひ", "こ", "う", "き"], "romaji": "hikōki", "mean": "airplane", "cat": "Things", "emoji": "✈️", "exJp": "ひこうきに のる。", "exTr": "I board an airplane." },
+  { "kana": ["し", "ん", "か", "ん", "せ", "ん"], "romaji": "shinkansen", "mean": "bullet train", "cat": "Things", "emoji": "🚄", "exJp": "しんかんせんは はやい。", "exTr": "The bullet train is fast." },
+  { "kana": ["し", "ん", "ぶ", "ん"], "romaji": "shinbun", "mean": "newspaper", "cat": "Things", "emoji": "📰", "exJp": "しんぶんを よむ。", "exTr": "I read the newspaper." },
+  { "kana": ["れ", "い", "ぞ", "う", "こ"], "romaji": "reizōko", "mean": "refrigerator", "cat": "Things", "emoji": "🧊", "exJp": "れいぞうこが あたらしい。", "exTr": "The fridge is new." },
+  { "kana": ["と", "し", "ょ", "か", "ん"], "romaji": "toshokan", "mean": "library", "cat": "Places", "emoji": "📚", "exJp": "としょかんで よむ。", "exTr": "I read at the library." },
+  { "kana": ["び", "じ", "ゅ", "つ", "か", "ん"], "romaji": "bijutsukan", "mean": "art museum", "cat": "Places", "emoji": "🖼️", "exJp": "びじゅつかんへ いく。", "exTr": "I go to the art museum." },
+  { "kana": ["え", "い", "が", "か", "ん"], "romaji": "eigakan", "mean": "cinema", "cat": "Places", "emoji": "🎦", "exJp": "えいがかんで みる。", "exTr": "I watch it at the cinema." },
+  { "kana": ["ゆ", "う", "び", "ん", "き", "ょ", "く"], "romaji": "yūbinkyoku", "mean": "post office", "cat": "Places", "emoji": "🏤", "exJp": "ゆうびんきょくへ いく。", "exTr": "I go to the post office." },
+  { "kana": ["く", "う", "こ", "う"], "romaji": "kūkō", "mean": "airport", "cat": "Places", "emoji": "🛫", "exJp": "くうこうで まつ。", "exTr": "I wait at the airport." },
+  { "kana": ["え", "き", "い", "ん"], "romaji": "ekiin", "mean": "station attendant", "cat": "People", "emoji": "", "exJp": "えきいんに きく。", "exTr": "I ask the station attendant." }
+]
