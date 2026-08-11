@@ -249,7 +249,7 @@ export default function Game() {
   /* ---- share (Wordle-style: one button, native sheet + clipboard fallback) ---- */
   const share = useCallback(async () => {
     if (!puzzle) return;
-    const text = shareText({ dayIndex, results }) + "\n\n" + SHARE_URL;
+    const text = shareText({ streak: save.streak }) + "\n" + SHARE_URL;
 
     // Mobile / supporting browsers: the native share sheet → send anywhere.
     if (typeof navigator !== "undefined" && navigator.share) {
@@ -276,7 +276,7 @@ export default function Game() {
       }
     }
     toast("Sharing isn't available here");
-  }, [dayIndex, puzzle, results, toast]);
+  }, [dayIndex, puzzle, save.streak, toast]);
 
   /* ---- derived state ---- */
   const onbActive = mode === "onboarding";

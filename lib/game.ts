@@ -210,21 +210,13 @@ export function evaluate(guess: string[], answer: string[]): TileState[] {
 }
 
 /**
- * Wordle-style share text: a header line (`YOMI Day N X/6`, or `X/6` on a
- * loss) then a blank line then the spoiler-free 🟩🟨⬛ grid. No letters, no
- * kana — just the colored squares, which render identically everywhere.
+ * Duolingo-style share text: lead with the streak, nothing else. No day
+ * number, no score, no spoiler grid — just "N day streak" and the invite.
  */
-export function shareText(opts: { dayIndex: number; results: TileState[][] }): string {
-  const { dayIndex, results } = opts;
-  const grid = results
-    .map((row) =>
-      row
-        .map((x) => (x === "correct" ? "🟩" : x === "present" ? "🟨" : "⬛"))
-        .join("")
-    )
-    .join("\n");
-  const solved =
-    results.length > 0 && results[results.length - 1].every((x) => x === "correct");
-  const score = solved ? String(results.length) : "X";
-  return `YOMI Day ${dayIndex + 1} ${score}/${MAX_GUESSES}\n\n${grid}`;
+export function shareText(opts: { streak: number }): string {
+  const { streak } = opts;
+  if (streak >= 1) {
+    return `🔥 ${streak} day streak on YOMI — one Japanese word a day.`;
+  }
+  return `Learning Japanese one word a day on YOMI. 🇯🇵`;
 }
