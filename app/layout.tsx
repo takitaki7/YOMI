@@ -1,7 +1,16 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://yomi.game";
+// Prefer an explicit site URL; otherwise use the URL Vercel injects at build
+// time so OGP/canonical links resolve correctly on preview + production
+// deploys with zero config. Falls back to the intended custom domain.
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : "https://yomi.game");
 const TITLE = "YOMI — one Japanese word a day";
 const DESCRIPTION =
   "A daily hiragana word game for Japanese learners. Spell one new word a day on the fifty-sounds keyboard, build a streak, and share your spoiler-free result.";
