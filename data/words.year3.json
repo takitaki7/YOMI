@@ -17,5 +17,20 @@
   { "kana": ["じ", "ゅ", "う", "し", "ょ"], "romaji": "jūsho", "mean": "address", "cat": "Daily life", "emoji": "📮", "exJp": "じゅうしょを かく。", "exTr": "I write the address." },
   { "kana": ["き", "ょ", "う"], "romaji": "kyō", "mean": "today", "cat": "Time", "emoji": "📅", "exJp": "きょうは あつい。", "exTr": "Today is hot." },
   { "kana": ["き", "ょ", "ね", "ん"], "romaji": "kyonen", "mean": "last year", "cat": "Time", "emoji": "🗓️", "exJp": "きょねん にほんへ いった。", "exTr": "I went to Japan last year." },
-  { "kana": ["り", "ょ", "う", "り"], "romaji": "ryōri", "mean": "cooking / cuisine", "cat": "Food & drink", "emoji": "🍳", "exJp": "りょうりを する。", "exTr": "I cook." }
+  { "kana": ["り", "ょ", "う", "り"], "romaji": "ryōri", "mean": "cooking / cuisine", "cat": "Food & drink", "emoji": "🍳", "exJp": "りょうりを する。", "exTr": "I cook." },
+  { "kana": ["じ", "し", "ょ"], "romaji": "jisho", "mean": "dictionary", "cat": "Things", "emoji": "📖", "exJp": "じしょを ひく。", "exTr": "I look it up in a dictionary." },
+  { "kana": ["き", "ょ", "う", "だ", "い"], "romaji": "kyōdai", "mean": "siblings", "cat": "People", "emoji": "", "exJp": "きょうだいが いる。", "exTr": "I have siblings." },
+  { "kana": ["り", "ょ", "こ", "う"], "romaji": "ryokō", "mean": "trip / travel", "cat": "Daily life", "emoji": "✈️", "exJp": "りょこうへ いく。", "exTr": "I go on a trip." },
+  { "kana": ["し", "ゅ", "っ", "ぱ", "つ"], "romaji": "shuppatsu", "mean": "departure", "cat": "Daily life", "emoji": "🚉", "exJp": "しゅっぱつする。", "exTr": "I depart." },
+  { "kana": ["き", "ゅ", "う", "こ", "う"], "romaji": "kyūkō", "mean": "express train", "cat": "Things", "emoji": "🚆", "exJp": "きゅうこうに のる。", "exTr": "I take the express." },
+  { "kana": ["び", "ょ", "う", "き"], "romaji": "byōki", "mean": "illness", "cat": "Daily life", "emoji": "🤒", "exJp": "びょうきに なる。", "exTr": "I get sick." },
+  { "kana": ["ち", "ゃ", "い", "ろ"], "romaji": "chairo", "mean": "brown", "cat": "Nature", "emoji": "🟤", "exJp": "かみが ちゃいろ。", "exTr": "The hair is brown." },
+  { "kana": ["が", "っ", "き"], "romaji": "gakki", "mean": "musical instrument", "cat": "Things", "emoji": "🎸", "exJp": "がっきを ひく。", "exTr": "I play an instrument." },
+  { "kana": ["じ", "ゅ", "ぎ", "ょ", "う"], "romaji": "jugyō", "mean": "class / lesson", "cat": "Daily life", "emoji": "🏫", "exJp": "じゅぎょうが はじまる。", "exTr": "Class begins." },
+  { "kana": ["し", "ょ", "う", "ゆ"], "romaji": "shōyu", "mean": "soy sauce", "cat": "Food & drink", "emoji": "🍶", "exJp": "しょうゆを かける。", "exTr": "I pour soy sauce." },
+  { "kana": ["き", "ょ", "う", "し", "つ"], "romaji": "kyōshitsu", "mean": "classroom", "cat": "Places", "emoji": "🏫", "exJp": "きょうしつに はいる。", "exTr": "I enter the classroom." },
+  { "kana": ["し", "ゃ", "ち", "ょ", "う"], "romaji": "shachō", "mean": "company president", "cat": "People", "emoji": "", "exJp": "しゃちょうと はなす。", "exTr": "I talk with the president." },
+  { "kana": ["ち", "ょ", "き", "ん"], "romaji": "chokin", "mean": "savings", "cat": "Daily life", "emoji": "🐷", "exJp": "ちょきんを する。", "exTr": "I save money." },
+  { "kana": ["し", "ゅ", "う", "ま", "つ"], "romaji": "shūmatsu", "mean": "weekend", "cat": "Time", "emoji": "", "exJp": "しゅうまつに あそぶ。", "exTr": "I hang out on the weekend." },
+  { "kana": ["し", "ょ", "う", "が", "つ"], "romaji": "shōgatsu", "mean": "New Year", "cat": "Time", "emoji": "🎍", "exJp": "しょうがつを いわう。", "exTr": "I celebrate the New Year." }
 ]

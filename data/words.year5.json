@@ -12,5 +12,13 @@
   { "kana": ["あ", "ん", "し", "ん"], "romaji": "anshin", "mean": "relief / peace of mind", "cat": "Abstract", "emoji": "", "exJp": "きいて あんしんした。", "exTr": "I was relieved to hear it." },
   { "kana": ["せ", "い", "こ", "う"], "romaji": "seikō", "mean": "success", "cat": "Abstract", "emoji": "", "exJp": "じっけんが せいこうした。", "exTr": "The experiment succeeded." },
   { "kana": ["し", "ゅ", "み"], "romaji": "shumi", "mean": "hobby", "cat": "Daily life", "emoji": "", "exJp": "しゅみは おんがく。", "exTr": "My hobby is music." },
-  { "kana": ["け", "い", "か", "く"], "romaji": "keikaku", "mean": "plan", "cat": "Abstract", "emoji": "", "exJp": "けいかくを たてる。", "exTr": "I make a plan." }
+  { "kana": ["け", "い", "か", "く"], "romaji": "keikaku", "mean": "plan", "cat": "Abstract", "emoji": "", "exJp": "けいかくを たてる。", "exTr": "I make a plan." },
+  { "kana": ["も", "ん", "だ", "い"], "romaji": "mondai", "mean": "problem / question", "cat": "Abstract", "emoji": "", "exJp": "もんだいを とく。", "exTr": "I solve the problem." },
+  { "kana": ["り", "ゆ", "う"], "romaji": "riyū", "mean": "reason", "cat": "Abstract", "emoji": "", "exJp": "りゆうを きく。", "exTr": "I ask the reason." },
+  { "kana": ["ほ", "う", "ほ", "う"], "romaji": "hōhō", "mean": "method / way", "cat": "Abstract", "emoji": "", "exJp": "いい ほうほうが ある。", "exTr": "There's a good method." },
+  { "kana": ["も", "く", "ひ", "ょ", "う"], "romaji": "mokuhyō", "mean": "goal / target", "cat": "Abstract", "emoji": "", "exJp": "もくひょうを きめる。", "exTr": "I set a goal." },
+  { "kana": ["せ", "い", "か", "い"], "romaji": "seikai", "mean": "correct answer", "cat": "Abstract", "emoji": "", "exJp": "せいかいを えらぶ。", "exTr": "I choose the right answer." },
+  { "kana": ["し", "っ", "ぱ", "い"], "romaji": "shippai", "mean": "failure", "cat": "Abstract", "emoji": "", "exJp": "しっぱいを おそれない。", "exTr": "I'm not afraid of failure." },
+  { "kana": ["き", "そ", "く"], "romaji": "kisoku", "mean": "rule", "cat": "Abstract", "emoji": "", "exJp": "きそくを まもる。", "exTr": "I follow the rules." },
+  { "kana": ["ど", "り", "ょ", "く"], "romaji": "doryoku", "mean": "effort", "cat": "Abstract", "emoji": "", "exJp": "どりょくを つづける。", "exTr": "I keep up the effort." }
 ]

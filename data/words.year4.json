@@ -14,5 +14,13 @@
   { "kana": ["お", "お", "き", "い"], "romaji": "ōkii", "mean": "big", "cat": "Description", "emoji": "", "exJp": "ぞうは おおきい。", "exTr": "The elephant is big." },
   { "kana": ["は", "や", "い"], "romaji": "hayai", "mean": "fast / early", "cat": "Description", "emoji": "", "exJp": "しんかんせんは はやい。", "exTr": "The bullet train is fast." },
   { "kana": ["つ", "よ", "い"], "romaji": "tsuyoi", "mean": "strong", "cat": "Description", "emoji": "", "exJp": "かれは つよい。", "exTr": "He is strong." },
-  { "kana": ["あ", "か", "る", "い"], "romaji": "akarui", "mean": "bright / cheerful", "cat": "Description", "emoji": "", "exJp": "へやが あかるい。", "exTr": "The room is bright." }
+  { "kana": ["あ", "か", "る", "い"], "romaji": "akarui", "mean": "bright / cheerful", "cat": "Description", "emoji": "", "exJp": "へやが あかるい。", "exTr": "The room is bright." },
+  { "kana": ["さ", "む", "い"], "romaji": "samui", "mean": "cold (weather)", "cat": "Description", "emoji": "", "exJp": "きょうは さむい。", "exTr": "It's cold today." },
+  { "kana": ["あ", "つ", "い"], "romaji": "atsui", "mean": "hot", "cat": "Description", "emoji": "", "exJp": "なつは あつい。", "exTr": "Summer is hot." },
+  { "kana": ["ね", "む", "い"], "romaji": "nemui", "mean": "sleepy", "cat": "Feeling", "emoji": "", "exJp": "とても ねむい。", "exTr": "I'm very sleepy." },
+  { "kana": ["い", "そ", "が", "し", "い"], "romaji": "isogashii", "mean": "busy", "cat": "Feeling", "emoji": "", "exJp": "まいにち いそがしい。", "exTr": "I'm busy every day." },
+  { "kana": ["う", "る", "さ", "い"], "romaji": "urusai", "mean": "noisy / annoying", "cat": "Description", "emoji": "", "exJp": "そとが うるさい。", "exTr": "It's noisy outside." },
+  { "kana": ["す", "ず", "し", "い"], "romaji": "suzushii", "mean": "cool (pleasant)", "cat": "Description", "emoji": "", "exJp": "あきは すずしい。", "exTr": "Autumn is cool." },
+  { "kana": ["あ", "ぶ", "な", "い"], "romaji": "abunai", "mean": "dangerous", "cat": "Description", "emoji": "", "exJp": "そこは あぶない。", "exTr": "It's dangerous there." },
+  { "kana": ["く", "ら", "い"], "romaji": "kurai", "mean": "dark", "cat": "Description", "emoji": "", "exJp": "へやが くらい。", "exTr": "The room is dark." }
 ]
