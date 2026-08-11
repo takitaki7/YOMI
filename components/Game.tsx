@@ -24,7 +24,8 @@ import {
   type DayProgress,
   type SaveState,
 } from "@/lib/storage";
-import { track } from "@/lib/analytics";
+import { track, setAnalyticsSink } from "@/lib/analytics";
+import { track as vercelTrack } from "@vercel/analytics";
 
 // Share to the live site. Overridable via env for a future custom domain.
 const SHARE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://yomi-ten-wheat.vercel.app";
@@ -120,6 +121,12 @@ export default function Game() {
   );
 
   useEffect(() => {
+    // Forward custom game events (play_start, guess, resolve, share) to Vercel
+    // Analytics so clear-rate and share metrics are captured from launch.
+    setAnalyticsSink((e) => {
+      const { name, ...props } = e;
+      vercelTrack(name, props as Record<string, string | number | boolean>);
+    });
     const s = loadState();
     setSave(s);
     start(s);

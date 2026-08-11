@@ -1,16 +1,9 @@
 import type { Metadata, Viewport } from "next";
+import { Analytics } from "@vercel/analytics/react";
+import { siteUrl } from "@/lib/site";
 import "./globals.css";
 
-// Prefer an explicit site URL; otherwise use the URL Vercel injects at build
-// time so OGP/canonical links resolve correctly on preview + production
-// deploys with zero config. Falls back to the intended custom domain.
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ||
-  (process.env.VERCEL_PROJECT_PRODUCTION_URL
-    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-    : process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : "https://yomi.game");
+const SITE_URL = siteUrl();
 const TITLE = "YOMI — one Japanese word a day";
 const DESCRIPTION =
   "A daily hiragana word game for Japanese learners. Spell one new word a day on the fifty-sounds keyboard, build a streak, and share your spoiler-free result.";
@@ -20,6 +13,18 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   applicationName: "YOMI",
+  keywords: [
+    "Japanese",
+    "hiragana",
+    "learn Japanese",
+    "daily word game",
+    "wordle",
+    "vocabulary",
+    "kana",
+    "nihongo",
+  ],
+  alternates: { canonical: "/" },
+  robots: { index: true, follow: true },
   manifest: "/manifest.webmanifest",
   appleWebApp: {
     capable: true,
@@ -61,6 +66,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body>
         {children}
+        {/* Privacy-friendly pageview analytics (DAU) when deployed on Vercel. */}
+        <Analytics />
         {/* Register the service worker for offline / installable PWA. */}
         <script
           dangerouslySetInnerHTML={{
