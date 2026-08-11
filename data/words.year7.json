@@ -3,5 +3,10 @@
   { "kana": ["せ", "い", "か", "つ"], "romaji": "seikatsu", "mean": "daily life", "cat": "Abstract", "emoji": "", "exJp": "せいかつが かわった。", "exTr": "My life changed." },
   { "kana": ["か", "ん", "け", "い"], "romaji": "kankei", "mean": "relationship", "cat": "Abstract", "emoji": "", "exJp": "いい かんけいを つくる。", "exTr": "I build a good relationship." },
   { "kana": ["よ", "そ", "う"], "romaji": "yosō", "mean": "prediction", "cat": "Abstract", "emoji": "", "exJp": "よそうが あたる。", "exTr": "The prediction comes true." },
-  { "kana": ["き", "か", "い"], "romaji": "kikai", "mean": "opportunity", "cat": "Abstract", "emoji": "", "exJp": "いい きかいだ。", "exTr": "It's a good opportunity." }
+  { "kana": ["き", "か", "い"], "romaji": "kikai", "mean": "opportunity", "cat": "Abstract", "emoji": "", "exJp": "いい きかいだ。", "exTr": "It's a good opportunity." },
+  { "kana": ["き", "ぼ", "う"], "romaji": "kibō", "mean": "hope / wish", "cat": "Abstract", "emoji": "", "exJp": "きぼうを もつ。", "exTr": "I hold on to hope." },
+  { "kana": ["き", "ろ", "く"], "romaji": "kiroku", "mean": "record", "cat": "Abstract", "emoji": "", "exJp": "きろくを のこす。", "exTr": "I leave a record." },
+  { "kana": ["げ", "ん", "い", "ん"], "romaji": "gen'in", "mean": "cause", "cat": "Abstract", "emoji": "", "exJp": "げんいんを しらべる。", "exTr": "I investigate the cause." },
+  { "kana": ["け", "っ", "か"], "romaji": "kekka", "mean": "result", "cat": "Abstract", "emoji": "", "exJp": "けっかを まつ。", "exTr": "I wait for the result." },
+  { "kana": ["も", "く", "て", "き"], "romaji": "mokuteki", "mean": "purpose / goal", "cat": "Abstract", "emoji": "", "exJp": "もくてきを きめる。", "exTr": "I decide on a goal." }
 ]

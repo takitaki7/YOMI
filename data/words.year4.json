@@ -1,10 +1,18 @@
 [
   { "kana": ["た", "の", "し", "い"], "romaji": "tanoshii", "mean": "fun / enjoyable", "cat": "Feeling", "emoji": "", "exJp": "にほんごは たのしい。", "exTr": "Japanese is fun." },
   { "kana": ["う", "れ", "し", "い"], "romaji": "ureshii", "mean": "happy / glad", "cat": "Feeling", "emoji": "", "exJp": "とても うれしい。", "exTr": "I'm very glad." },
+  { "kana": ["か", "な", "し", "い"], "romaji": "kanashii", "mean": "sad", "cat": "Feeling", "emoji": "", "exJp": "えいがが かなしい。", "exTr": "The movie is sad." },
+  { "kana": ["さ", "び", "し", "い"], "romaji": "sabishii", "mean": "lonely", "cat": "Feeling", "emoji": "", "exJp": "ひとりは さびしい。", "exTr": "Being alone is lonely." },
+  { "kana": ["こ", "わ", "い"], "romaji": "kowai", "mean": "scary", "cat": "Feeling", "emoji": "", "exJp": "その はなしは こわい。", "exTr": "That story is scary." },
   { "kana": ["や", "さ", "し", "い"], "romaji": "yasashii", "mean": "kind / easy", "cat": "Feeling", "emoji": "", "exJp": "かのじょは やさしい。", "exTr": "She is kind." },
   { "kana": ["お", "い", "し", "い"], "romaji": "oishii", "mean": "delicious", "cat": "Feeling", "emoji": "", "exJp": "ラーメンは おいしい。", "exTr": "Ramen is delicious." },
-  { "kana": ["さ", "び", "し", "い"], "romaji": "sabishii", "mean": "lonely", "cat": "Feeling", "emoji": "", "exJp": "ひとりは さびしい。", "exTr": "Being alone is lonely." },
-  { "kana": ["う", "つ", "く", "し", "い"], "romaji": "utsukushii", "mean": "beautiful", "cat": "Feeling", "emoji": "", "exJp": "けしきが うつくしい。", "exTr": "The scenery is beautiful." },
-  { "kana": ["あ", "た", "ら", "し", "い"], "romaji": "atarashii", "mean": "new", "cat": "Feeling", "emoji": "", "exJp": "あたらしい くつを かう。", "exTr": "I buy new shoes." },
-  { "kana": ["む", "ず", "か", "し", "い"], "romaji": "muzukashii", "mean": "difficult", "cat": "Feeling", "emoji": "", "exJp": "かんじは むずかしい。", "exTr": "Kanji is difficult." }
+  { "kana": ["う", "つ", "く", "し", "い"], "romaji": "utsukushii", "mean": "beautiful", "cat": "Description", "emoji": "", "exJp": "けしきが うつくしい。", "exTr": "The scenery is beautiful." },
+  { "kana": ["あ", "た", "ら", "し", "い"], "romaji": "atarashii", "mean": "new", "cat": "Description", "emoji": "", "exJp": "あたらしい くつを かう。", "exTr": "I buy new shoes." },
+  { "kana": ["む", "ず", "か", "し", "い"], "romaji": "muzukashii", "mean": "difficult", "cat": "Description", "emoji": "", "exJp": "かんじは むずかしい。", "exTr": "Kanji is difficult." },
+  { "kana": ["た", "か", "い"], "romaji": "takai", "mean": "tall / expensive", "cat": "Description", "emoji": "", "exJp": "この ビルは たかい。", "exTr": "This building is tall." },
+  { "kana": ["ち", "い", "さ", "い"], "romaji": "chiisai", "mean": "small", "cat": "Description", "emoji": "", "exJp": "こねこは ちいさい。", "exTr": "The kitten is small." },
+  { "kana": ["お", "お", "き", "い"], "romaji": "ōkii", "mean": "big", "cat": "Description", "emoji": "", "exJp": "ぞうは おおきい。", "exTr": "The elephant is big." },
+  { "kana": ["は", "や", "い"], "romaji": "hayai", "mean": "fast / early", "cat": "Description", "emoji": "", "exJp": "しんかんせんは はやい。", "exTr": "The bullet train is fast." },
+  { "kana": ["つ", "よ", "い"], "romaji": "tsuyoi", "mean": "strong", "cat": "Description", "emoji": "", "exJp": "かれは つよい。", "exTr": "He is strong." },
+  { "kana": ["あ", "か", "る", "い"], "romaji": "akarui", "mean": "bright / cheerful", "cat": "Description", "emoji": "", "exJp": "へやが あかるい。", "exTr": "The room is bright." }
 ]

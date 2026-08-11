@@ -3,5 +3,10 @@
   { "kana": ["よ", "ゆ", "う"], "romaji": "yoyū", "mean": "leeway / composure", "cat": "Abstract", "emoji": "", "exJp": "じかんに よゆうが ある。", "exTr": "There's time to spare." },
   { "kana": ["か", "く", "ご"], "romaji": "kakugo", "mean": "resolve / readiness", "cat": "Abstract", "emoji": "", "exJp": "かくごを きめる。", "exTr": "I steel my resolve." },
   { "kana": ["い", "よ", "く"], "romaji": "iyoku", "mean": "motivation / drive", "cat": "Abstract", "emoji": "", "exJp": "いよくが わく。", "exTr": "Motivation wells up." },
-  { "kana": ["か", "ん", "か", "く"], "romaji": "kankaku", "mean": "sense / intuition", "cat": "Abstract", "emoji": "", "exJp": "かんかくが するどい。", "exTr": "The intuition is sharp." }
+  { "kana": ["か", "ん", "か", "く"], "romaji": "kankaku", "mean": "sense / intuition", "cat": "Abstract", "emoji": "", "exJp": "かんかくが するどい。", "exTr": "The intuition is sharp." },
+  { "kana": ["け", "い", "こ", "う"], "romaji": "keikō", "mean": "tendency", "cat": "Abstract", "emoji": "", "exJp": "ふえる けいこうが ある。", "exTr": "There is a tendency to increase." },
+  { "kana": ["こ", "う", "り", "ょ"], "romaji": "kōryo", "mean": "consideration / deliberation", "cat": "Abstract", "emoji": "", "exJp": "こうりょに いれる。", "exTr": "I take it into consideration." },
+  { "kana": ["よ", "う", "そ"], "romaji": "yōso", "mean": "element / factor", "cat": "Abstract", "emoji": "", "exJp": "だいじな ようそだ。", "exTr": "It is an important factor." },
+  { "kana": ["は", "ん", "え", "い"], "romaji": "han'ei", "mean": "reflection (of something)", "cat": "Abstract", "emoji": "", "exJp": "いけんを はんえいする。", "exTr": "I reflect the opinions." },
+  { "kana": ["し", "こ", "う"], "romaji": "shikō", "mean": "thought / thinking", "cat": "Abstract", "emoji": "", "exJp": "しこうが ふかい。", "exTr": "The thinking is deep." }
 ]

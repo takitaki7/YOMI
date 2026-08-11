@@ -3,5 +3,10 @@
   { "kana": ["み", "れ", "ん"], "romaji": "miren", "mean": "lingering attachment", "cat": "Abstract", "emoji": "", "exJp": "みれんが のこる。", "exTr": "A lingering attachment remains." },
   { "kana": ["お", "も", "わ", "く"], "romaji": "omowaku", "mean": "intention / expectation", "cat": "Abstract", "emoji": "", "exJp": "あいての おもわくを よむ。", "exTr": "I read the other's intentions." },
   { "kana": ["な", "ご", "り"], "romaji": "nagori", "mean": "traces / lingering memory", "cat": "Abstract", "emoji": "", "exJp": "なごりを おしむ。", "exTr": "I am reluctant to part." },
-  { "kana": ["お", "も", "む", "き"], "romaji": "omomuki", "mean": "taste / elegance", "cat": "Abstract", "emoji": "", "exJp": "にわに おもむきが ある。", "exTr": "The garden has a certain elegance." }
+  { "kana": ["お", "も", "む", "き"], "romaji": "omomuki", "mean": "taste / elegance", "cat": "Abstract", "emoji": "", "exJp": "にわに おもむきが ある。", "exTr": "The garden has a certain elegance." },
+  { "kana": ["お", "も", "か", "げ"], "romaji": "omokage", "mean": "vestige / trace of a face", "cat": "Abstract", "emoji": "", "exJp": "むかしの おもかげが ある。", "exTr": "There are traces of the old days." },
+  { "kana": ["ゆ", "え", "ん"], "romaji": "yuen", "mean": "reason / grounds", "cat": "Abstract", "emoji": "", "exJp": "それが にんきの ゆえんだ。", "exTr": "That is the reason for its popularity." },
+  { "kana": ["き", "ざ", "し"], "romaji": "kizashi", "mean": "sign / omen", "cat": "Abstract", "emoji": "", "exJp": "はるの きざしが みえる。", "exTr": "Signs of spring are appearing." },
+  { "kana": ["た", "た", "ず", "ま", "い"], "romaji": "tatazumai", "mean": "appearance / atmosphere", "cat": "Abstract", "emoji": "", "exJp": "しずかな たたずまいの まち。", "exTr": "A town with a quiet atmosphere." },
+  { "kana": ["せ", "つ", "な"], "romaji": "setsuna", "mean": "a fleeting moment", "cat": "Abstract", "emoji": "", "exJp": "せつなの できごと。", "exTr": "An event of a fleeting moment." }
 ]

@@ -1,9 +1,16 @@
 [
   { "kana": ["べ", "ん", "き", "ょ", "う"], "romaji": "benkyō", "mean": "study", "cat": "Daily life", "emoji": "", "exJp": "まいにち べんきょうする。", "exTr": "I study every day." },
+  { "kana": ["れ", "ん", "し", "ゅ", "う"], "romaji": "renshū", "mean": "practice", "cat": "Daily life", "emoji": "", "exJp": "ピアノを れんしゅうする。", "exTr": "I practice the piano." },
   { "kana": ["し", "ご", "と"], "romaji": "shigoto", "mean": "work / job", "cat": "Daily life", "emoji": "", "exJp": "しごとが いそがしい。", "exTr": "Work is busy." },
+  { "kana": ["し", "つ", "も", "ん"], "romaji": "shitsumon", "mean": "question", "cat": "Daily life", "emoji": "", "exJp": "しつもんが ある。", "exTr": "I have a question." },
+  { "kana": ["へ", "ん", "じ"], "romaji": "henji", "mean": "reply / answer", "cat": "Daily life", "emoji": "", "exJp": "へんじを まつ。", "exTr": "I wait for a reply." },
   { "kana": ["や", "く", "そ", "く"], "romaji": "yakusoku", "mean": "promise", "cat": "Abstract", "emoji": "", "exJp": "やくそくを まもる。", "exTr": "I keep a promise." },
   { "kana": ["き", "も", "ち"], "romaji": "kimochi", "mean": "feeling / mood", "cat": "Abstract", "emoji": "", "exJp": "きもちが いい。", "exTr": "It feels good." },
   { "kana": ["よ", "て", "い"], "romaji": "yotei", "mean": "plan / schedule", "cat": "Abstract", "emoji": "", "exJp": "よていを たてる。", "exTr": "I make a plan." },
   { "kana": ["せ", "つ", "め", "い"], "romaji": "setsumei", "mean": "explanation", "cat": "Abstract", "emoji": "", "exJp": "せつめいを きく。", "exTr": "I listen to the explanation." },
-  { "kana": ["し", "ゅ", "み"], "romaji": "shumi", "mean": "hobby", "cat": "Daily life", "emoji": "", "exJp": "しゅみは おんがく。", "exTr": "My hobby is music." }
+  { "kana": ["し", "ん", "ぱ", "い"], "romaji": "shinpai", "mean": "worry", "cat": "Abstract", "emoji": "", "exJp": "しけんが しんぱいだ。", "exTr": "I'm worried about the exam." },
+  { "kana": ["あ", "ん", "し", "ん"], "romaji": "anshin", "mean": "relief / peace of mind", "cat": "Abstract", "emoji": "", "exJp": "きいて あんしんした。", "exTr": "I was relieved to hear it." },
+  { "kana": ["せ", "い", "こ", "う"], "romaji": "seikō", "mean": "success", "cat": "Abstract", "emoji": "", "exJp": "じっけんが せいこうした。", "exTr": "The experiment succeeded." },
+  { "kana": ["し", "ゅ", "み"], "romaji": "shumi", "mean": "hobby", "cat": "Daily life", "emoji": "", "exJp": "しゅみは おんがく。", "exTr": "My hobby is music." },
+  { "kana": ["け", "い", "か", "く"], "romaji": "keikaku", "mean": "plan", "cat": "Abstract", "emoji": "", "exJp": "けいかくを たてる。", "exTr": "I make a plan." }
 ]

@@ -16,21 +16,71 @@ const INDIGO_DEEP = "#2E3BA6";
 const KANA_FONT = "WenQuanYi Zen Hei";
 const SANS = "DejaVu Sans";
 
-// Square app icon. `pad` shrinks the glyph for maskable safe-area.
+// Square app icon: a "Y" wordmark rendered as a Liquid Glass tile — indigo
+// base, a refractive prism rim, a top specular sheen, a lower caustic pool,
+// and a glassy Y with real thickness. The Y is drawn as a path (round joins)
+// so it needs no font. `maskable` makes it full-bleed for the Android safe area.
 function iconSVG(size, { maskable = false } = {}) {
-  const r = maskable ? 0 : Math.round(size * 0.22);
-  const glyph = Math.round(size * (maskable ? 0.5 : 0.62));
-  const cy = size * 0.5 + glyph * 0.34;
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 ${size} ${size}">
+  const S = size;
+  const r = maskable ? 0 : Math.round(S * 0.225);
+  const inset = maskable ? 0 : S * 0.03; // pull the rim stroke inside the edge
+  const rimW = Math.max(1, S * 0.02);
+
+  // Y geometry (fractions of S) — sits within the maskable safe area.
+  const lx = 0.335 * S, rx = 0.665 * S, cx = 0.5 * S;
+  const ty = 0.305 * S, my = 0.515 * S, by = 0.715 * S;
+  const yPath = `M ${lx} ${ty} L ${cx} ${my} L ${rx} ${ty} M ${cx} ${my} L ${cx} ${by}`;
+  const yW = S * 0.12;
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${S}" height="${S}" viewBox="0 0 ${S} ${S}">
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="${INDIGO}"/>
+    <linearGradient id="base" x1="0" y1="0" x2="0.15" y2="1">
+      <stop offset="0" stop-color="#4E5EDC"/>
+      <stop offset="0.55" stop-color="${INDIGO}"/>
       <stop offset="1" stop-color="${INDIGO_DEEP}"/>
     </linearGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="rgba(255,255,255,0.95)"/>
+      <stop offset="0.24" stop-color="rgba(255,255,255,0.28)"/>
+      <stop offset="0.46" stop-color="rgba(150,175,255,0.75)"/>
+      <stop offset="0.6" stop-color="rgba(255,255,255,0.3)"/>
+      <stop offset="0.8" stop-color="rgba(255,170,210,0.7)"/>
+      <stop offset="1" stop-color="rgba(255,255,255,0.95)"/>
+    </linearGradient>
+    <radialGradient id="sheen" cx="0.3" cy="-0.1" r="0.9">
+      <stop offset="0" stop-color="rgba(255,255,255,0.92)"/>
+      <stop offset="0.42" stop-color="rgba(255,255,255,0)"/>
+    </radialGradient>
+    <radialGradient id="caustic" cx="0.72" cy="1.12" r="0.7">
+      <stop offset="0" stop-color="rgba(160,190,255,0.55)"/>
+      <stop offset="0.5" stop-color="rgba(160,190,255,0)"/>
+    </radialGradient>
+    <linearGradient id="yface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="rgba(255,255,255,1)"/>
+      <stop offset="1" stop-color="rgba(226,232,255,0.9)"/>
+    </linearGradient>
+    <clipPath id="clip"><rect width="${S}" height="${S}" rx="${r}"/></clipPath>
   </defs>
-  <rect width="${size}" height="${size}" rx="${r}" fill="url(#g)"/>
-  <rect width="${size}" height="${size}" rx="${r}" fill="none" stroke="rgba(255,255,255,0.14)" stroke-width="${Math.max(1, size * 0.01)}"/>
-  <text x="50%" y="${cy}" text-anchor="middle" font-family="${KANA_FONT}" font-size="${glyph}" fill="#ffffff">よ</text>
+
+  <rect width="${S}" height="${S}" rx="${r}" fill="url(#base)"/>
+  <g clip-path="url(#clip)">
+    <rect width="${S}" height="${S}" fill="url(#sheen)"/>
+    <rect width="${S}" height="${S}" fill="url(#caustic)"/>
+    <!-- soft specular streak near the top edge -->
+    <ellipse cx="${S * 0.5}" cy="${S * 0.06}" rx="${S * 0.62}" ry="${S * 0.16}" fill="rgba(255,255,255,0.35)"/>
+    <!-- Y drop-shadow for thickness -->
+    <path d="${yPath}" fill="none" stroke="rgba(20,26,64,0.32)" stroke-width="${yW}"
+      stroke-linecap="round" stroke-linejoin="round" transform="translate(0 ${S * 0.014})"/>
+    <!-- Y glass face -->
+    <path d="${yPath}" fill="none" stroke="url(#yface)" stroke-width="${yW}"
+      stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Y top highlight -->
+    <path d="${yPath}" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="${yW * 0.26}"
+      stroke-linecap="round" stroke-linejoin="round" transform="translate(0 ${-S * 0.006})"/>
+  </g>
+  <!-- inner top hairline + refractive rim -->
+  <rect x="${inset}" y="${inset}" width="${S - inset * 2}" height="${S - inset * 2}"
+    rx="${Math.max(0, r - inset)}" fill="none" stroke="url(#rim)" stroke-width="${rimW}"/>
 </svg>`;
 }
 
