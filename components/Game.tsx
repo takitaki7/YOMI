@@ -515,10 +515,12 @@ export default function Game() {
               <div className="romaji">{puzzle.w.romaji}</div>
               <div className="meaning">{puzzle.w.mean}</div>
             </div>
-            <div className="ym-ex">
-              <div className="jp">{puzzle.w.exJp}</div>
-              <div className="tr">{puzzle.w.exTr}</div>
-            </div>
+            {puzzle.w.exJp ? (
+              <div className="ym-ex">
+                <div className="jp">{puzzle.w.exJp}</div>
+                <div className="tr">{puzzle.w.exTr}</div>
+              </div>
+            ) : null}
 
             <div className="ym-stats">
               <div className="ym-stat">
@@ -635,6 +637,17 @@ export default function Game() {
               The kana is not in the word.
             </div>
             <div className="rule">A new word every day. Keep your streak alive.</div>
+            <div className="ym-credit">
+              Word data from JMdict, © the{" "}
+              <a
+                href="https://www.edrdg.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                EDRDG
+              </a>
+              , used under CC BY-SA 4.0.
+            </div>
             <button className="ym-next" onClick={() => setShowHelp(false)}>
               Got it
             </button>

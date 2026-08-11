@@ -1,48 +1,3684 @@
 [
-  { "kana": ["み", "ず"], "romaji": "mizu", "mean": "water", "cat": "Nature", "emoji": "💧", "exJp": "みずを ください。", "exTr": "Water, please." },
-  { "kana": ["か", "ぜ"], "romaji": "kaze", "mean": "wind", "cat": "Nature", "emoji": "🌬️", "exJp": "かぜが つよい。", "exTr": "The wind is strong." },
-  { "kana": ["ご", "は", "ん"], "romaji": "gohan", "mean": "rice / meal", "cat": "Food & drink", "emoji": "🍚", "exJp": "ごはんを たべる。", "exTr": "I eat a meal." },
-  { "kana": ["た", "ま", "ご"], "romaji": "tamago", "mean": "egg", "cat": "Food & drink", "emoji": "🥚", "exJp": "たまごを たべる。", "exTr": "I eat an egg." },
-  { "kana": ["そ", "ば"], "romaji": "soba", "mean": "soba noodles", "cat": "Food & drink", "emoji": "🍜", "exJp": "そばを たべる。", "exTr": "I eat soba." },
-  { "kana": ["た", "べ", "も", "の"], "romaji": "tabemono", "mean": "food", "cat": "Food & drink", "emoji": "🍱", "exJp": "たべものが おいしい。", "exTr": "The food is delicious." },
-  { "kana": ["の", "み", "も", "の"], "romaji": "nomimono", "mean": "drink", "cat": "Food & drink", "emoji": "🥤", "exJp": "のみものを かう。", "exTr": "I buy a drink." },
-  { "kana": ["く", "だ", "も", "の"], "romaji": "kudamono", "mean": "fruit", "cat": "Food & drink", "emoji": "🍎", "exJp": "くだものが あまい。", "exTr": "The fruit is sweet." },
-  { "kana": ["や", "さ", "い"], "romaji": "yasai", "mean": "vegetable", "cat": "Food & drink", "emoji": "🥬", "exJp": "やさいを きる。", "exTr": "I cut the vegetables." },
-  { "kana": ["ぶ", "た"], "romaji": "buta", "mean": "pig", "cat": "Animal", "emoji": "🐷", "exJp": "ぶたが ねる。", "exTr": "The pig is sleeping." },
-  { "kana": ["う", "さ", "ぎ"], "romaji": "usagi", "mean": "rabbit", "cat": "Animal", "emoji": "🐰", "exJp": "うさぎが はねる。", "exTr": "The rabbit hops." },
-  { "kana": ["ど", "う", "ぶ", "つ"], "romaji": "dōbutsu", "mean": "animal", "cat": "Animal", "emoji": "🐾", "exJp": "どうぶつが すき。", "exTr": "I like animals." },
-  { "kana": ["か", "ば", "ん"], "romaji": "kaban", "mean": "bag", "cat": "Things", "emoji": "👜", "exJp": "かばんが おもい。", "exTr": "The bag is heavy." },
-  { "kana": ["て", "が", "み"], "romaji": "tegami", "mean": "letter", "cat": "Things", "emoji": "✉️", "exJp": "てがみを かく。", "exTr": "I write a letter." },
-  { "kana": ["か", "ぎ"], "romaji": "kagi", "mean": "key", "cat": "Things", "emoji": "🔑", "exJp": "かぎを なくす。", "exTr": "I lose my key." },
-  { "kana": ["か", "が", "み"], "romaji": "kagami", "mean": "mirror", "cat": "Things", "emoji": "🪞", "exJp": "かがみを みる。", "exTr": "I look in the mirror." },
-  { "kana": ["め", "が", "ね"], "romaji": "megane", "mean": "glasses", "cat": "Things", "emoji": "👓", "exJp": "めがねを かける。", "exTr": "I put on my glasses." },
-  { "kana": ["ぼ", "う", "し"], "romaji": "bōshi", "mean": "hat", "cat": "Things", "emoji": "🧢", "exJp": "ぼうしを かぶる。", "exTr": "I put on a hat." },
-  { "kana": ["ち", "ず"], "romaji": "chizu", "mean": "map", "cat": "Things", "emoji": "🗺️", "exJp": "ちずを みる。", "exTr": "I look at the map." },
-  { "kana": ["で", "ん", "わ"], "romaji": "denwa", "mean": "telephone", "cat": "Things", "emoji": "📞", "exJp": "でんわを かける。", "exTr": "I make a phone call." },
-  { "kana": ["ま", "ど"], "romaji": "mado", "mean": "window", "cat": "Things", "emoji": "🪟", "exJp": "まどを あける。", "exTr": "I open the window." },
-  { "kana": ["か", "ぞ", "く"], "romaji": "kazoku", "mean": "family", "cat": "People", "emoji": "👨‍👩‍👧", "exJp": "かぞくが だいすき。", "exTr": "I love my family." },
-  { "kana": ["え", "い", "が"], "romaji": "eiga", "mean": "movie", "cat": "Daily life", "emoji": "🎬", "exJp": "えいがを みる。", "exTr": "I watch a movie." },
-  { "kana": ["で", "ぐ", "ち"], "romaji": "deguchi", "mean": "exit", "cat": "Places", "emoji": "🚪", "exJp": "でぐちを さがす。", "exTr": "I look for the exit." },
-  { "kana": ["み", "ぎ"], "romaji": "migi", "mean": "right (direction)", "cat": "Daily life", "emoji": "➡️", "exJp": "みぎに まがる。", "exTr": "I turn right." },
-  { "kana": ["ひ", "だ", "り"], "romaji": "hidari", "mean": "left (direction)", "cat": "Daily life", "emoji": "⬅️", "exJp": "ひだりに みえる。", "exTr": "You can see it on the left." },
-  { "kana": ["み", "ど", "り"], "romaji": "midori", "mean": "green", "cat": "Nature", "emoji": "🟢", "exJp": "はっぱが みどり。", "exTr": "The leaves are green." },
-  { "kana": ["だ", "い", "が", "く"], "romaji": "daigaku", "mean": "university", "cat": "Places", "emoji": "🎓", "exJp": "だいがくへ いく。", "exTr": "I go to university." },
-  { "kana": ["ぎ", "ん", "こ", "う"], "romaji": "ginkō", "mean": "bank", "cat": "Places", "emoji": "🏦", "exJp": "ぎんこうへ いく。", "exTr": "I go to the bank." },
-  { "kana": ["て", "ん", "き"], "romaji": "tenki", "mean": "weather", "cat": "Nature", "emoji": "⛅", "exJp": "てんきが いい。", "exTr": "The weather is nice." },
-  { "kana": ["げ", "ん", "き"], "romaji": "genki", "mean": "healthy / energetic", "cat": "Feeling", "emoji": "", "exJp": "げんきに なる。", "exTr": "I feel better." },
-  { "kana": ["ど", "う", "ぐ"], "romaji": "dōgu", "mean": "tool", "cat": "Things", "emoji": "🛠️", "exJp": "どうぐを つかう。", "exTr": "I use a tool." },
-  { "kana": ["た", "て", "も", "の"], "romaji": "tatemono", "mean": "building", "cat": "Places", "emoji": "🏢", "exJp": "たてものが たかい。", "exTr": "The building is tall." },
-  { "kana": ["え", "ん", "ぴ", "つ"], "romaji": "enpitsu", "mean": "pencil", "cat": "Things", "emoji": "✏️", "exJp": "えんぴつで かく。", "exTr": "I write with a pencil." },
-  { "kana": ["じ", "か", "ん"], "romaji": "jikan", "mean": "time / hour", "cat": "Time", "emoji": "⏰", "exJp": "じかんが ない。", "exTr": "There's no time." },
-  { "kana": ["あ", "さ", "ご", "は", "ん"], "romaji": "asagohan", "mean": "breakfast", "cat": "Food & drink", "emoji": "🍳", "exJp": "あさごはんを たべる。", "exTr": "I eat breakfast." },
-  { "kana": ["ば", "ん", "ご", "は", "ん"], "romaji": "bangohan", "mean": "dinner", "cat": "Food & drink", "emoji": "🍽️", "exJp": "ばんごはんを つくる。", "exTr": "I make dinner." },
-  { "kana": ["て", "ぶ", "く", "ろ"], "romaji": "tebukuro", "mean": "gloves", "cat": "Things", "emoji": "🧤", "exJp": "てぶくろを はめる。", "exTr": "I put on gloves." },
-  { "kana": ["か", "い", "だ", "ん"], "romaji": "kaidan", "mean": "stairs", "cat": "Places", "emoji": "", "exJp": "かいだんを のぼる。", "exTr": "I climb the stairs." },
-  { "kana": ["に", "も", "つ"], "romaji": "nimotsu", "mean": "luggage", "cat": "Things", "emoji": "🧳", "exJp": "にもつが おもい。", "exTr": "The luggage is heavy." },
-  { "kana": ["だ", "い", "ど", "こ", "ろ"], "romaji": "daidokoro", "mean": "kitchen", "cat": "Places", "emoji": "", "exJp": "だいどころで りょうりする。", "exTr": "I cook in the kitchen." },
-  { "kana": ["か", "ぐ"], "romaji": "kagu", "mean": "furniture", "cat": "Things", "emoji": "🪑", "exJp": "かぐを かう。", "exTr": "I buy furniture." },
-  { "kana": ["で", "ん", "き"], "romaji": "denki", "mean": "electricity / light", "cat": "Things", "emoji": "💡", "exJp": "でんきを つける。", "exTr": "I turn on the light." },
-  { "kana": ["ま", "ん", "が"], "romaji": "manga", "mean": "manga / comic", "cat": "Things", "emoji": "📚", "exJp": "まんがを よむ。", "exTr": "I read manga." },
-  { "kana": ["ど", "よ", "う", "び"], "romaji": "doyōbi", "mean": "Saturday", "cat": "Time", "emoji": "", "exJp": "どようびは やすみ。", "exTr": "Saturday is a day off." },
-  { "kana": ["に", "ち", "よ", "う", "び"], "romaji": "nichiyōbi", "mean": "Sunday", "cat": "Time", "emoji": "", "exJp": "にちようびに あそぶ。", "exTr": "I hang out on Sunday." }
+  {
+    "kana": [
+      "み",
+      "ず"
+    ],
+    "romaji": "mizu",
+    "mean": "water",
+    "cat": "Nature",
+    "emoji": "💧",
+    "exJp": "みずを ください。",
+    "exTr": "Water, please."
+  },
+  {
+    "kana": [
+      "か",
+      "ぜ"
+    ],
+    "romaji": "kaze",
+    "mean": "wind",
+    "cat": "Nature",
+    "emoji": "🌬️",
+    "exJp": "かぜが つよい。",
+    "exTr": "The wind is strong."
+  },
+  {
+    "kana": [
+      "ご",
+      "は",
+      "ん"
+    ],
+    "romaji": "gohan",
+    "mean": "rice / meal",
+    "cat": "Food & drink",
+    "emoji": "🍚",
+    "exJp": "ごはんを たべる。",
+    "exTr": "I eat a meal."
+  },
+  {
+    "kana": [
+      "た",
+      "ま",
+      "ご"
+    ],
+    "romaji": "tamago",
+    "mean": "egg",
+    "cat": "Food & drink",
+    "emoji": "🥚",
+    "exJp": "たまごを たべる。",
+    "exTr": "I eat an egg."
+  },
+  {
+    "kana": [
+      "そ",
+      "ば"
+    ],
+    "romaji": "soba",
+    "mean": "soba noodles",
+    "cat": "Food & drink",
+    "emoji": "🍜",
+    "exJp": "そばを たべる。",
+    "exTr": "I eat soba."
+  },
+  {
+    "kana": [
+      "た",
+      "べ",
+      "も",
+      "の"
+    ],
+    "romaji": "tabemono",
+    "mean": "food",
+    "cat": "Food & drink",
+    "emoji": "🍱",
+    "exJp": "たべものが おいしい。",
+    "exTr": "The food is delicious."
+  },
+  {
+    "kana": [
+      "の",
+      "み",
+      "も",
+      "の"
+    ],
+    "romaji": "nomimono",
+    "mean": "drink",
+    "cat": "Food & drink",
+    "emoji": "🥤",
+    "exJp": "のみものを かう。",
+    "exTr": "I buy a drink."
+  },
+  {
+    "kana": [
+      "く",
+      "だ",
+      "も",
+      "の"
+    ],
+    "romaji": "kudamono",
+    "mean": "fruit",
+    "cat": "Food & drink",
+    "emoji": "🍎",
+    "exJp": "くだものが あまい。",
+    "exTr": "The fruit is sweet."
+  },
+  {
+    "kana": [
+      "や",
+      "さ",
+      "い"
+    ],
+    "romaji": "yasai",
+    "mean": "vegetable",
+    "cat": "Food & drink",
+    "emoji": "🥬",
+    "exJp": "やさいを きる。",
+    "exTr": "I cut the vegetables."
+  },
+  {
+    "kana": [
+      "ぶ",
+      "た"
+    ],
+    "romaji": "buta",
+    "mean": "pig",
+    "cat": "Animal",
+    "emoji": "🐷",
+    "exJp": "ぶたが ねる。",
+    "exTr": "The pig is sleeping."
+  },
+  {
+    "kana": [
+      "う",
+      "さ",
+      "ぎ"
+    ],
+    "romaji": "usagi",
+    "mean": "rabbit",
+    "cat": "Animal",
+    "emoji": "🐰",
+    "exJp": "うさぎが はねる。",
+    "exTr": "The rabbit hops."
+  },
+  {
+    "kana": [
+      "ど",
+      "う",
+      "ぶ",
+      "つ"
+    ],
+    "romaji": "dōbutsu",
+    "mean": "animal",
+    "cat": "Animal",
+    "emoji": "🐾",
+    "exJp": "どうぶつが すき。",
+    "exTr": "I like animals."
+  },
+  {
+    "kana": [
+      "か",
+      "ば",
+      "ん"
+    ],
+    "romaji": "kaban",
+    "mean": "bag",
+    "cat": "Things",
+    "emoji": "👜",
+    "exJp": "かばんが おもい。",
+    "exTr": "The bag is heavy."
+  },
+  {
+    "kana": [
+      "て",
+      "が",
+      "み"
+    ],
+    "romaji": "tegami",
+    "mean": "letter",
+    "cat": "Things",
+    "emoji": "✉️",
+    "exJp": "てがみを かく。",
+    "exTr": "I write a letter."
+  },
+  {
+    "kana": [
+      "か",
+      "ぎ"
+    ],
+    "romaji": "kagi",
+    "mean": "key",
+    "cat": "Things",
+    "emoji": "🔑",
+    "exJp": "かぎを なくす。",
+    "exTr": "I lose my key."
+  },
+  {
+    "kana": [
+      "か",
+      "が",
+      "み"
+    ],
+    "romaji": "kagami",
+    "mean": "mirror",
+    "cat": "Things",
+    "emoji": "🪞",
+    "exJp": "かがみを みる。",
+    "exTr": "I look in the mirror."
+  },
+  {
+    "kana": [
+      "め",
+      "が",
+      "ね"
+    ],
+    "romaji": "megane",
+    "mean": "glasses",
+    "cat": "Things",
+    "emoji": "👓",
+    "exJp": "めがねを かける。",
+    "exTr": "I put on my glasses."
+  },
+  {
+    "kana": [
+      "ぼ",
+      "う",
+      "し"
+    ],
+    "romaji": "bōshi",
+    "mean": "hat",
+    "cat": "Things",
+    "emoji": "🧢",
+    "exJp": "ぼうしを かぶる。",
+    "exTr": "I put on a hat."
+  },
+  {
+    "kana": [
+      "ち",
+      "ず"
+    ],
+    "romaji": "chizu",
+    "mean": "map",
+    "cat": "Things",
+    "emoji": "🗺️",
+    "exJp": "ちずを みる。",
+    "exTr": "I look at the map."
+  },
+  {
+    "kana": [
+      "で",
+      "ん",
+      "わ"
+    ],
+    "romaji": "denwa",
+    "mean": "telephone",
+    "cat": "Things",
+    "emoji": "📞",
+    "exJp": "でんわを かける。",
+    "exTr": "I make a phone call."
+  },
+  {
+    "kana": [
+      "ま",
+      "ど"
+    ],
+    "romaji": "mado",
+    "mean": "window",
+    "cat": "Things",
+    "emoji": "🪟",
+    "exJp": "まどを あける。",
+    "exTr": "I open the window."
+  },
+  {
+    "kana": [
+      "か",
+      "ぞ",
+      "く"
+    ],
+    "romaji": "kazoku",
+    "mean": "family",
+    "cat": "People",
+    "emoji": "👨‍👩‍👧",
+    "exJp": "かぞくが だいすき。",
+    "exTr": "I love my family."
+  },
+  {
+    "kana": [
+      "え",
+      "い",
+      "が"
+    ],
+    "romaji": "eiga",
+    "mean": "movie",
+    "cat": "Daily life",
+    "emoji": "🎬",
+    "exJp": "えいがを みる。",
+    "exTr": "I watch a movie."
+  },
+  {
+    "kana": [
+      "で",
+      "ぐ",
+      "ち"
+    ],
+    "romaji": "deguchi",
+    "mean": "exit",
+    "cat": "Places",
+    "emoji": "🚪",
+    "exJp": "でぐちを さがす。",
+    "exTr": "I look for the exit."
+  },
+  {
+    "kana": [
+      "み",
+      "ぎ"
+    ],
+    "romaji": "migi",
+    "mean": "right (direction)",
+    "cat": "Daily life",
+    "emoji": "➡️",
+    "exJp": "みぎに まがる。",
+    "exTr": "I turn right."
+  },
+  {
+    "kana": [
+      "ひ",
+      "だ",
+      "り"
+    ],
+    "romaji": "hidari",
+    "mean": "left (direction)",
+    "cat": "Daily life",
+    "emoji": "⬅️",
+    "exJp": "ひだりに みえる。",
+    "exTr": "You can see it on the left."
+  },
+  {
+    "kana": [
+      "み",
+      "ど",
+      "り"
+    ],
+    "romaji": "midori",
+    "mean": "green",
+    "cat": "Nature",
+    "emoji": "🟢",
+    "exJp": "はっぱが みどり。",
+    "exTr": "The leaves are green."
+  },
+  {
+    "kana": [
+      "だ",
+      "い",
+      "が",
+      "く"
+    ],
+    "romaji": "daigaku",
+    "mean": "university",
+    "cat": "Places",
+    "emoji": "🎓",
+    "exJp": "だいがくへ いく。",
+    "exTr": "I go to university."
+  },
+  {
+    "kana": [
+      "ぎ",
+      "ん",
+      "こ",
+      "う"
+    ],
+    "romaji": "ginkō",
+    "mean": "bank",
+    "cat": "Places",
+    "emoji": "🏦",
+    "exJp": "ぎんこうへ いく。",
+    "exTr": "I go to the bank."
+  },
+  {
+    "kana": [
+      "て",
+      "ん",
+      "き"
+    ],
+    "romaji": "tenki",
+    "mean": "weather",
+    "cat": "Nature",
+    "emoji": "⛅",
+    "exJp": "てんきが いい。",
+    "exTr": "The weather is nice."
+  },
+  {
+    "kana": [
+      "げ",
+      "ん",
+      "き"
+    ],
+    "romaji": "genki",
+    "mean": "healthy / energetic",
+    "cat": "Feeling",
+    "emoji": "",
+    "exJp": "げんきに なる。",
+    "exTr": "I feel better."
+  },
+  {
+    "kana": [
+      "ど",
+      "う",
+      "ぐ"
+    ],
+    "romaji": "dōgu",
+    "mean": "tool",
+    "cat": "Things",
+    "emoji": "🛠️",
+    "exJp": "どうぐを つかう。",
+    "exTr": "I use a tool."
+  },
+  {
+    "kana": [
+      "た",
+      "て",
+      "も",
+      "の"
+    ],
+    "romaji": "tatemono",
+    "mean": "building",
+    "cat": "Places",
+    "emoji": "🏢",
+    "exJp": "たてものが たかい。",
+    "exTr": "The building is tall."
+  },
+  {
+    "kana": [
+      "え",
+      "ん",
+      "ぴ",
+      "つ"
+    ],
+    "romaji": "enpitsu",
+    "mean": "pencil",
+    "cat": "Things",
+    "emoji": "✏️",
+    "exJp": "えんぴつで かく。",
+    "exTr": "I write with a pencil."
+  },
+  {
+    "kana": [
+      "じ",
+      "か",
+      "ん"
+    ],
+    "romaji": "jikan",
+    "mean": "time / hour",
+    "cat": "Time",
+    "emoji": "⏰",
+    "exJp": "じかんが ない。",
+    "exTr": "There's no time."
+  },
+  {
+    "kana": [
+      "あ",
+      "さ",
+      "ご",
+      "は",
+      "ん"
+    ],
+    "romaji": "asagohan",
+    "mean": "breakfast",
+    "cat": "Food & drink",
+    "emoji": "🍳",
+    "exJp": "あさごはんを たべる。",
+    "exTr": "I eat breakfast."
+  },
+  {
+    "kana": [
+      "ば",
+      "ん",
+      "ご",
+      "は",
+      "ん"
+    ],
+    "romaji": "bangohan",
+    "mean": "dinner",
+    "cat": "Food & drink",
+    "emoji": "🍽️",
+    "exJp": "ばんごはんを つくる。",
+    "exTr": "I make dinner."
+  },
+  {
+    "kana": [
+      "て",
+      "ぶ",
+      "く",
+      "ろ"
+    ],
+    "romaji": "tebukuro",
+    "mean": "gloves",
+    "cat": "Things",
+    "emoji": "🧤",
+    "exJp": "てぶくろを はめる。",
+    "exTr": "I put on gloves."
+  },
+  {
+    "kana": [
+      "か",
+      "い",
+      "だ",
+      "ん"
+    ],
+    "romaji": "kaidan",
+    "mean": "stairs",
+    "cat": "Places",
+    "emoji": "",
+    "exJp": "かいだんを のぼる。",
+    "exTr": "I climb the stairs."
+  },
+  {
+    "kana": [
+      "に",
+      "も",
+      "つ"
+    ],
+    "romaji": "nimotsu",
+    "mean": "luggage",
+    "cat": "Things",
+    "emoji": "🧳",
+    "exJp": "にもつが おもい。",
+    "exTr": "The luggage is heavy."
+  },
+  {
+    "kana": [
+      "だ",
+      "い",
+      "ど",
+      "こ",
+      "ろ"
+    ],
+    "romaji": "daidokoro",
+    "mean": "kitchen",
+    "cat": "Places",
+    "emoji": "",
+    "exJp": "だいどころで りょうりする。",
+    "exTr": "I cook in the kitchen."
+  },
+  {
+    "kana": [
+      "か",
+      "ぐ"
+    ],
+    "romaji": "kagu",
+    "mean": "furniture",
+    "cat": "Things",
+    "emoji": "🪑",
+    "exJp": "かぐを かう。",
+    "exTr": "I buy furniture."
+  },
+  {
+    "kana": [
+      "で",
+      "ん",
+      "き"
+    ],
+    "romaji": "denki",
+    "mean": "electricity / light",
+    "cat": "Things",
+    "emoji": "💡",
+    "exJp": "でんきを つける。",
+    "exTr": "I turn on the light."
+  },
+  {
+    "kana": [
+      "ま",
+      "ん",
+      "が"
+    ],
+    "romaji": "manga",
+    "mean": "manga / comic",
+    "cat": "Things",
+    "emoji": "📚",
+    "exJp": "まんがを よむ。",
+    "exTr": "I read manga."
+  },
+  {
+    "kana": [
+      "ど",
+      "よ",
+      "う",
+      "び"
+    ],
+    "romaji": "doyōbi",
+    "mean": "Saturday",
+    "cat": "Time",
+    "emoji": "",
+    "exJp": "どようびは やすみ。",
+    "exTr": "Saturday is a day off."
+  },
+  {
+    "kana": [
+      "に",
+      "ち",
+      "よ",
+      "う",
+      "び"
+    ],
+    "romaji": "nichiyōbi",
+    "mean": "Sunday",
+    "cat": "Time",
+    "emoji": "",
+    "exJp": "にちようびに あそぶ。",
+    "exTr": "I hang out on Sunday."
+  },
+  {
+    "kana": [
+      "ぎ",
+      "じ",
+      "ゅ",
+      "つ"
+    ],
+    "romaji": "gijutsu",
+    "mean": "technology",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ぎ",
+      "ち",
+      "ょ",
+      "う"
+    ],
+    "romaji": "gichou",
+    "mean": "chair",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "け",
+      "い",
+      "え",
+      "い"
+    ],
+    "romaji": "keiei",
+    "mean": "management",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "け",
+      "い",
+      "さ",
+      "つ"
+    ],
+    "romaji": "keisatsu",
+    "mean": "police",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "け",
+      "い",
+      "や",
+      "く"
+    ],
+    "romaji": "keiyaku",
+    "mean": "contract",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "け",
+      "っ",
+      "て",
+      "い"
+    ],
+    "romaji": "kettei",
+    "mean": "decision",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "け",
+      "ん",
+      "き",
+      "ん"
+    ],
+    "romaji": "kenkin",
+    "mean": "donation",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "け",
+      "ん",
+      "せ",
+      "つ"
+    ],
+    "romaji": "kensetsu",
+    "mean": "construction",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "け",
+      "ん",
+      "ぽ",
+      "う"
+    ],
+    "romaji": "kenpou",
+    "mean": "constitution",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "げ",
+      "ん",
+      "ざ",
+      "い"
+    ],
+    "romaji": "genzai",
+    "mean": "now",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "げ",
+      "ん",
+      "じ",
+      "つ"
+    ],
+    "romaji": "genjitsu",
+    "mean": "reality",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "げ",
+      "ん",
+      "そ",
+      "く"
+    ],
+    "romaji": "gensoku",
+    "mean": "principle",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "こ",
+      "う",
+      "げ",
+      "き"
+    ],
+    "romaji": "kougeki",
+    "mean": "attack",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "こ",
+      "う",
+      "こ",
+      "う"
+    ],
+    "romaji": "koukou",
+    "mean": "senior high school",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "こ",
+      "う",
+      "ぞ",
+      "う"
+    ],
+    "romaji": "kouzou",
+    "mean": "structure",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "こ",
+      "う",
+      "ど",
+      "う"
+    ],
+    "romaji": "koudou",
+    "mean": "action",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "こ",
+      "く",
+      "さ",
+      "い"
+    ],
+    "romaji": "kokusai",
+    "mean": "international",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "こ",
+      "く",
+      "な",
+      "い"
+    ],
+    "romaji": "kokunai",
+    "mean": "internal",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "こ",
+      "く",
+      "べ",
+      "つ"
+    ],
+    "romaji": "kokubetsu",
+    "mean": "farewell",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "こ",
+      "く",
+      "み",
+      "ん"
+    ],
+    "romaji": "kokumin",
+    "mean": "people (of a country)",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "こ",
+      "く",
+      "れ",
+      "ん"
+    ],
+    "romaji": "kokuren",
+    "mean": "United Nations",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "こ",
+      "っ",
+      "か",
+      "い"
+    ],
+    "romaji": "kokkai",
+    "mean": "National Diet",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "こ",
+      "ん",
+      "か",
+      "い"
+    ],
+    "romaji": "konkai",
+    "mean": "this time",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "こ",
+      "ん",
+      "げ",
+      "つ"
+    ],
+    "romaji": "kongetsu",
+    "mean": "this month",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ご",
+      "じ",
+      "ゅ",
+      "う"
+    ],
+    "romaji": "gojuu",
+    "mean": "fifty",
+    "cat": "Number",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "さ",
+      "い",
+      "き",
+      "ん"
+    ],
+    "romaji": "saikin",
+    "mean": "recently",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "さ",
+      "い",
+      "こ",
+      "う"
+    ],
+    "romaji": "saikou",
+    "mean": "most",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "さ",
+      "い",
+      "し",
+      "ょ"
+    ],
+    "romaji": "saisho",
+    "mean": "beginning",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "さ",
+      "い",
+      "だ",
+      "い"
+    ],
+    "romaji": "saidai",
+    "mean": "biggest",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "さ",
+      "い",
+      "ば",
+      "ん"
+    ],
+    "romaji": "saiban",
+    "mean": "trial",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "さ",
+      "ぎ",
+      "ょ",
+      "う"
+    ],
+    "romaji": "sagyou",
+    "mean": "work",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "さ",
+      "く",
+      "げ",
+      "ん"
+    ],
+    "romaji": "sakugen",
+    "mean": "cut",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "さ",
+      "く",
+      "ね",
+      "ん"
+    ],
+    "romaji": "sakunen",
+    "mean": "last year",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "さ",
+      "く",
+      "ひ",
+      "ん"
+    ],
+    "romaji": "sakuhin",
+    "mean": "work (e.g. book, film, composition, etc.)",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "さ",
+      "ん",
+      "い",
+      "ん"
+    ],
+    "romaji": "san'in",
+    "mean": "House of Councillors (upper house of the…",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "さ",
+      "ん",
+      "が",
+      "つ"
+    ],
+    "romaji": "sangatsu",
+    "mean": "March",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "さ",
+      "ん",
+      "に",
+      "ん"
+    ],
+    "romaji": "sannin",
+    "mean": "three people",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ざ",
+      "い",
+      "せ",
+      "い"
+    ],
+    "romaji": "zaisei",
+    "mean": "public finance",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "し",
+      "じ",
+      "ょ",
+      "う"
+    ],
+    "romaji": "shijou",
+    "mean": "market (financial, stock, domestic, etc.)",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "し",
+      "ち",
+      "が",
+      "つ"
+    ],
+    "romaji": "shichigatsu",
+    "mean": "July",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "し",
+      "ゅ",
+      "の",
+      "う"
+    ],
+    "romaji": "shunou",
+    "mean": "head",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "し",
+      "ん",
+      "と",
+      "う"
+    ],
+    "romaji": "shintou",
+    "mean": "new (political) party",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "じ",
+      "ぎ",
+      "ょ",
+      "う"
+    ],
+    "romaji": "jigyou",
+    "mean": "project",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "じ",
+      "じ",
+      "ょ",
+      "う"
+    ],
+    "romaji": "jijou",
+    "mean": "circumstances",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "じ",
+      "む",
+      "し",
+      "ょ"
+    ],
+    "romaji": "jimusho",
+    "mean": "office",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "じ",
+      "ゅ",
+      "う",
+      "ご"
+    ],
+    "romaji": "juugo",
+    "mean": "15",
+    "cat": "Number",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "じ",
+      "ゅ",
+      "う",
+      "し"
+    ],
+    "romaji": "juushi",
+    "mean": "14",
+    "cat": "Number",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "じ",
+      "ゅ",
+      "う",
+      "に"
+    ],
+    "romaji": "juuni",
+    "mean": "twelve",
+    "cat": "Number",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "じ",
+      "ょ",
+      "せ",
+      "い"
+    ],
+    "romaji": "josei",
+    "mean": "woman",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "じ",
+      "ん",
+      "こ",
+      "う"
+    ],
+    "romaji": "jinkou",
+    "mean": "population",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "す",
+      "い",
+      "し",
+      "ん"
+    ],
+    "romaji": "suishin",
+    "mean": "propulsion",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "せ",
+      "い",
+      "け",
+      "ん"
+    ],
+    "romaji": "seiken",
+    "mean": "(political) administration",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "せ",
+      "い",
+      "さ",
+      "く"
+    ],
+    "romaji": "seisaku",
+    "mean": "political measures",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "せ",
+      "い",
+      "さ",
+      "ん"
+    ],
+    "romaji": "seisan",
+    "mean": "production",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "せ",
+      "い",
+      "じ",
+      "か"
+    ],
+    "romaji": "seijika",
+    "mean": "politician",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "せ",
+      "い",
+      "と",
+      "う"
+    ],
+    "romaji": "seitou",
+    "mean": "political party",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "せ",
+      "ん",
+      "き",
+      "ょ"
+    ],
+    "romaji": "senkyo",
+    "mean": "election",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "せ",
+      "ん",
+      "げ",
+      "ん"
+    ],
+    "romaji": "sengen",
+    "mean": "declaration",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "せ",
+      "ん",
+      "し",
+      "ゅ"
+    ],
+    "romaji": "senshu",
+    "mean": "player (sports)",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "せ",
+      "ん",
+      "そ",
+      "う"
+    ],
+    "romaji": "sensou",
+    "mean": "war",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ぜ",
+      "ん",
+      "こ",
+      "く"
+    ],
+    "romaji": "zenkoku",
+    "mean": "the whole country",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ぜ",
+      "ん",
+      "た",
+      "い"
+    ],
+    "romaji": "zentai",
+    "mean": "whole",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ぜ",
+      "ん",
+      "ね",
+      "ん"
+    ],
+    "romaji": "zennen",
+    "mean": "the preceding year",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "そ",
+      "う",
+      "か",
+      "い"
+    ],
+    "romaji": "soukai",
+    "mean": "general meeting",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "そ",
+      "う",
+      "ご",
+      "う"
+    ],
+    "romaji": "sougou",
+    "mean": "synthesis",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "そ",
+      "う",
+      "さ",
+      "い"
+    ],
+    "romaji": "sousai",
+    "mean": "president (of an organization)",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "た",
+      "い",
+      "お",
+      "う"
+    ],
+    "romaji": "taiou",
+    "mean": "correspondence (to)",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "た",
+      "い",
+      "か",
+      "い"
+    ],
+    "romaji": "taikai",
+    "mean": "mass meeting",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "た",
+      "い",
+      "さ",
+      "く"
+    ],
+    "romaji": "taisaku",
+    "mean": "measure",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "た",
+      "い",
+      "せ",
+      "い"
+    ],
+    "romaji": "taisei",
+    "mean": "order",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "た",
+      "い",
+      "わ",
+      "ん"
+    ],
+    "romaji": "taiwan",
+    "mean": "Taiwan",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "だ",
+      "ん",
+      "か",
+      "い"
+    ],
+    "romaji": "dankai",
+    "mean": "grade",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "だ",
+      "ん",
+      "せ",
+      "い"
+    ],
+    "romaji": "dansei",
+    "mean": "man",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "だ",
+      "ん",
+      "た",
+      "い"
+    ],
+    "romaji": "dantai",
+    "mean": "organization",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ち",
+      "き",
+      "ゅ",
+      "う"
+    ],
+    "romaji": "chikyuu",
+    "mean": "Earth",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ち",
+      "ょ",
+      "う",
+      "さ"
+    ],
+    "romaji": "chousa",
+    "mean": "investigation",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "つ",
+      "う",
+      "し",
+      "ん"
+    ],
+    "romaji": "tsuushin",
+    "mean": "correspondence",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "と",
+      "う",
+      "い",
+      "つ"
+    ],
+    "romaji": "touitsu",
+    "mean": "unity",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "と",
+      "う",
+      "し",
+      "ゅ"
+    ],
+    "romaji": "toushu",
+    "mean": "pitcher",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "と",
+      "う",
+      "し",
+      "ょ"
+    ],
+    "romaji": "tousho",
+    "mean": "beginning",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "と",
+      "く",
+      "べ",
+      "つ"
+    ],
+    "romaji": "tokubetsu",
+    "mean": "special",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "と",
+      "り",
+      "ひ",
+      "き"
+    ],
+    "romaji": "torihiki",
+    "mean": "transactions",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ど",
+      "う",
+      "し",
+      "ゃ"
+    ],
+    "romaji": "dousha",
+    "mean": "the same firm",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ど",
+      "う",
+      "じ",
+      "つ"
+    ],
+    "romaji": "doujitsu",
+    "mean": "the same day",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "な",
+      "い",
+      "か",
+      "く"
+    ],
+    "romaji": "naikaku",
+    "mean": "cabinet (of a government)",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "な",
+      "い",
+      "よ",
+      "う"
+    ],
+    "romaji": "naiyou",
+    "mean": "contents",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "に",
+      "ち",
+      "べ",
+      "い"
+    ],
+    "romaji": "nichibei",
+    "mean": "Japan and the United States",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "に",
+      "ん",
+      "げ",
+      "ん"
+    ],
+    "romaji": "ningen",
+    "mean": "human being",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ね",
+      "ん",
+      "か",
+      "ん"
+    ],
+    "romaji": "nenkan",
+    "mean": "(period of) a year",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "は",
+      "い",
+      "け",
+      "い"
+    ],
+    "romaji": "haikei",
+    "mean": "background",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "は",
+      "ち",
+      "が",
+      "つ"
+    ],
+    "romaji": "hachigatsu",
+    "mean": "August",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "は",
+      "つ",
+      "げ",
+      "ん"
+    ],
+    "romaji": "hatsugen",
+    "mean": "statement",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "は",
+      "ん",
+      "け",
+      "つ"
+    ],
+    "romaji": "hanketsu",
+    "mean": "judicial decision",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "は",
+      "ん",
+      "た",
+      "い"
+    ],
+    "romaji": "hantai",
+    "mean": "opposition",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "は",
+      "ん",
+      "ば",
+      "い"
+    ],
+    "romaji": "hanbai",
+    "mean": "sales",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ば",
+      "ん",
+      "ぐ",
+      "み"
+    ],
+    "romaji": "bangumi",
+    "mean": "program (e.g. TV)",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ひ",
+      "つ",
+      "よ",
+      "う"
+    ],
+    "romaji": "hitsuyou",
+    "mean": "necessary",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ひ",
+      "と",
+      "び",
+      "と"
+    ],
+    "romaji": "hitobito",
+    "mean": "people",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ふ",
+      "き",
+      "ょ",
+      "う"
+    ],
+    "romaji": "fukyou",
+    "mean": "depression",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ぶ",
+      "ち",
+      "ょ",
+      "う"
+    ],
+    "romaji": "buchou",
+    "mean": "head (chief, director) of a section or…",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "へ",
+      "い",
+      "き",
+      "ん"
+    ],
+    "romaji": "heikin",
+    "mean": "average",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "べ",
+      "い",
+      "こ",
+      "く"
+    ],
+    "romaji": "beikoku",
+    "mean": "(United States of) America",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ほ",
+      "う",
+      "あ",
+      "ん"
+    ],
+    "romaji": "houan",
+    "mean": "bill (law)",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ほ",
+      "う",
+      "こ",
+      "う"
+    ],
+    "romaji": "houkou",
+    "mean": "direction",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ほ",
+      "う",
+      "こ",
+      "く"
+    ],
+    "romaji": "houkoku",
+    "mean": "report",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ほ",
+      "う",
+      "し",
+      "ん"
+    ],
+    "romaji": "houshin",
+    "mean": "policy",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ほ",
+      "う",
+      "そ",
+      "う"
+    ],
+    "romaji": "housou",
+    "mean": "broadcast",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ほ",
+      "う",
+      "ど",
+      "う"
+    ],
+    "romaji": "houdou",
+    "mean": "report (of news)",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ほ",
+      "う",
+      "も",
+      "ん"
+    ],
+    "romaji": "houmon",
+    "mean": "call",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ほ",
+      "ん",
+      "し",
+      "ゃ"
+    ],
+    "romaji": "honsha",
+    "mean": "head office",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ぼ",
+      "う",
+      "え",
+      "い"
+    ],
+    "romaji": "bouei",
+    "mean": "defense",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ぼ",
+      "う",
+      "え",
+      "き"
+    ],
+    "romaji": "boueki",
+    "mean": "trade (foreign)",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ま",
+      "い",
+      "に",
+      "ち"
+    ],
+    "romaji": "mainichi",
+    "mean": "every day",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "み",
+      "ず",
+      "か",
+      "ら"
+    ],
+    "romaji": "mizukara",
+    "mean": "oneself",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "み",
+      "と",
+      "お",
+      "し"
+    ],
+    "romaji": "mitooshi",
+    "mean": "unobstructed view",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "み",
+      "な",
+      "お",
+      "し"
+    ],
+    "romaji": "minaoshi",
+    "mean": "review",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "み",
+      "ん",
+      "か",
+      "ん"
+    ],
+    "romaji": "minkan",
+    "mean": "private",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "み",
+      "ん",
+      "し",
+      "ゅ"
+    ],
+    "romaji": "minshu",
+    "mean": "democracy",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "み",
+      "ん",
+      "ぞ",
+      "く"
+    ],
+    "romaji": "minzoku",
+    "mean": "people",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "も",
+      "っ",
+      "と",
+      "も"
+    ],
+    "romaji": "mottomo",
+    "mean": "most",
+    "cat": "Adverb",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "や",
+      "き",
+      "ゅ",
+      "う"
+    ],
+    "romaji": "yakyuu",
+    "mean": "baseball",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "や",
+      "く",
+      "わ",
+      "り"
+    ],
+    "romaji": "yakuwari",
+    "mean": "part",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ゆ",
+      "し",
+      "ゅ",
+      "つ"
+    ],
+    "romaji": "yushutsu",
+    "mean": "export",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ゆ",
+      "に",
+      "ゅ",
+      "う"
+    ],
+    "romaji": "yunyuu",
+    "mean": "import",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ら",
+      "い",
+      "ね",
+      "ん"
+    ],
+    "romaji": "rainen",
+    "mean": "next year",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "り",
+      "ょ",
+      "う",
+      "ど"
+    ],
+    "romaji": "ryoudo",
+    "mean": "dominion",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "れ",
+      "ん",
+      "ご",
+      "う"
+    ],
+    "romaji": "rengou",
+    "mean": "union",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "れ",
+      "ん",
+      "ぞ",
+      "く"
+    ],
+    "romaji": "renzoku",
+    "mean": "continuation",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "れ",
+      "ん",
+      "ぽ",
+      "う"
+    ],
+    "romaji": "renpou",
+    "mean": "commonwealth",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "れ",
+      "ん",
+      "り",
+      "つ"
+    ],
+    "romaji": "renritsu",
+    "mean": "coalition",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ろ",
+      "う",
+      "ど",
+      "う"
+    ],
+    "romaji": "roudou",
+    "mean": "manual labor",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ろ",
+      "く",
+      "が",
+      "つ"
+    ],
+    "romaji": "rokugatsu",
+    "mean": "June",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "わ",
+      "ん",
+      "が",
+      "ん"
+    ],
+    "romaji": "wangan",
+    "mean": "gulf coast",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "い",
+      "い",
+      "ん",
+      "か",
+      "い"
+    ],
+    "romaji": "iinkai",
+    "mean": "committee",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "お",
+      "う",
+      "し",
+      "ゅ",
+      "う"
+    ],
+    "romaji": "oushuu",
+    "mean": "Europe",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "か",
+      "い",
+      "ち",
+      "ょ",
+      "う"
+    ],
+    "romaji": "kaichou",
+    "mean": "president (of a society)",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "か",
+      "く",
+      "り",
+      "ょ",
+      "う"
+    ],
+    "romaji": "kakuryou",
+    "mean": "cabinet ministers",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "か",
+      "の",
+      "う",
+      "せ",
+      "い"
+    ],
+    "romaji": "kanousei",
+    "mean": "potentiality",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "が",
+      "い",
+      "し",
+      "ょ",
+      "う"
+    ],
+    "romaji": "gaishou",
+    "mean": "Foreign Minister",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "き",
+      "ょ",
+      "う",
+      "い",
+      "く"
+    ],
+    "romaji": "kyouiku",
+    "mean": "education",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "き",
+      "ょ",
+      "う",
+      "か",
+      "い"
+    ],
+    "romaji": "kyoukai",
+    "mean": "association",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "き",
+      "ょ",
+      "う",
+      "じ",
+      "ゅ"
+    ],
+    "romaji": "kyouju",
+    "mean": "professor",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "き",
+      "ょ",
+      "う",
+      "て",
+      "い"
+    ],
+    "romaji": "kyoutei",
+    "mean": "arrangement",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "き",
+      "ょ",
+      "う",
+      "ど",
+      "う"
+    ],
+    "romaji": "kyoudou",
+    "mean": "doing together (as equals)",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ぎ",
+      "ょ",
+      "う",
+      "か",
+      "い"
+    ],
+    "romaji": "gyoukai",
+    "mean": "business world",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ぎ",
+      "ょ",
+      "う",
+      "し",
+      "ゃ"
+    ],
+    "romaji": "gyousha",
+    "mean": "trader",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ぎ",
+      "ょ",
+      "う",
+      "せ",
+      "い"
+    ],
+    "romaji": "gyousei",
+    "mean": "administration",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ぐ",
+      "た",
+      "い",
+      "て",
+      "き"
+    ],
+    "romaji": "gutaiteki",
+    "mean": "concrete",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "け",
+      "ん",
+      "き",
+      "ゅ",
+      "う"
+    ],
+    "romaji": "kenkyuu",
+    "mean": "study",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "こ",
+      "う",
+      "し",
+      "ょ",
+      "う"
+    ],
+    "romaji": "koushou",
+    "mean": "negotiations",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "こ",
+      "う",
+      "じ",
+      "ょ",
+      "う"
+    ],
+    "romaji": "koujou",
+    "mean": "factory",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "こ",
+      "う",
+      "り",
+      "ゅ",
+      "う"
+    ],
+    "romaji": "kouryuu",
+    "mean": "exchange (e.g. cultural)",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "さ",
+      "い",
+      "し",
+      "ゅ",
+      "う"
+    ],
+    "romaji": "saishuu",
+    "mean": "last",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "さ",
+      "ん",
+      "ぎ",
+      "ょ",
+      "う"
+    ],
+    "romaji": "sangyou",
+    "mean": "industry",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "さ",
+      "ん",
+      "じ",
+      "ゅ",
+      "う"
+    ],
+    "romaji": "sanjuu",
+    "mean": "thirty",
+    "cat": "Number",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "し",
+      "ゅ",
+      "う",
+      "い",
+      "ん"
+    ],
+    "romaji": "shuuin",
+    "mean": "House of Representatives (lower house of the…",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "し",
+      "ゅ",
+      "う",
+      "へ",
+      "ん"
+    ],
+    "romaji": "shuuhen",
+    "mean": "circumference",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "し",
+      "ゅ",
+      "し",
+      "ょ",
+      "う"
+    ],
+    "romaji": "shushou",
+    "mean": "prime minister",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "し",
+      "ゅ",
+      "っ",
+      "し",
+      "ん"
+    ],
+    "romaji": "shusshin",
+    "mean": "person's origin (e.g. city, country…",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "し",
+      "ょ",
+      "う",
+      "け",
+      "ん"
+    ],
+    "romaji": "shouken",
+    "mean": "bond",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "し",
+      "ょ",
+      "う",
+      "ひ",
+      "ん"
+    ],
+    "romaji": "shouhin",
+    "mean": "commodity",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "し",
+      "ょ",
+      "う",
+      "ら",
+      "い"
+    ],
+    "romaji": "shourai",
+    "mean": "future (usually near)",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "し",
+      "ょ",
+      "く",
+      "い",
+      "ん"
+    ],
+    "romaji": "shokuin",
+    "mean": "staff member",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "じ",
+      "え",
+      "い",
+      "た",
+      "い"
+    ],
+    "romaji": "jieitai",
+    "mean": "self-defence force",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "じ",
+      "ど",
+      "う",
+      "し",
+      "ゃ"
+    ],
+    "romaji": "jidousha",
+    "mean": "car",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "じ",
+      "み",
+      "ん",
+      "と",
+      "う"
+    ],
+    "romaji": "jimintou",
+    "mean": "Liberal Democratic Party",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "じ",
+      "む",
+      "き",
+      "ょ",
+      "く"
+    ],
+    "romaji": "jimukyoku",
+    "mean": "secretariat",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "じ",
+      "ゅ",
+      "う",
+      "い",
+      "ち"
+    ],
+    "romaji": "juuichi",
+    "mean": "eleven",
+    "cat": "Number",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "じ",
+      "ゅ",
+      "う",
+      "が",
+      "つ"
+    ],
+    "romaji": "juugatsu",
+    "mean": "October",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "じ",
+      "ゅ",
+      "う",
+      "さ",
+      "ん"
+    ],
+    "romaji": "juusan",
+    "mean": "thirteen",
+    "cat": "Number",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "じ",
+      "ゅ",
+      "う",
+      "し",
+      "ち"
+    ],
+    "romaji": "juushichi",
+    "mean": "17",
+    "cat": "Number",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "じ",
+      "ゅ",
+      "う",
+      "た",
+      "く"
+    ],
+    "romaji": "juutaku",
+    "mean": "residence",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "じ",
+      "ゅ",
+      "う",
+      "は",
+      "ち"
+    ],
+    "romaji": "juuhachi",
+    "mean": "18",
+    "cat": "Number",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "じ",
+      "ゅ",
+      "う",
+      "み",
+      "ん"
+    ],
+    "romaji": "juumin",
+    "mean": "inhabitant",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "じ",
+      "ゅ",
+      "う",
+      "よ",
+      "う"
+    ],
+    "romaji": "juuyou",
+    "mean": "important",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "じ",
+      "ゅ",
+      "う",
+      "ら",
+      "い"
+    ],
+    "romaji": "juurai",
+    "mean": "up to now",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "じ",
+      "ょ",
+      "う",
+      "け",
+      "ん"
+    ],
+    "romaji": "jouken",
+    "mean": "condition",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "じ",
+      "ょ",
+      "う",
+      "せ",
+      "い"
+    ],
+    "romaji": "jousei",
+    "mean": "state of things",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "じ",
+      "ょ",
+      "う",
+      "た",
+      "い"
+    ],
+    "romaji": "joutai",
+    "mean": "state",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "じ",
+      "ょ",
+      "う",
+      "ほ",
+      "う"
+    ],
+    "romaji": "jouhou",
+    "mean": "information",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "じ",
+      "ょ",
+      "う",
+      "や",
+      "く"
+    ],
+    "romaji": "jouyaku",
+    "mean": "treaty",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "せ",
+      "い",
+      "ち",
+      "ょ",
+      "う"
+    ],
+    "romaji": "seichou",
+    "mean": "growth",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "せ",
+      "い",
+      "り",
+      "ょ",
+      "く"
+    ],
+    "romaji": "seiryoku",
+    "mean": "influence",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "た",
+      "い",
+      "し",
+      "ょ",
+      "う"
+    ],
+    "romaji": "taishou",
+    "mean": "target",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "だ",
+      "い",
+      "ひ",
+      "ょ",
+      "う"
+    ],
+    "romaji": "daihyou",
+    "mean": "representative",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ち",
+      "ゅ",
+      "う",
+      "お",
+      "う"
+    ],
+    "romaji": "chuuou",
+    "mean": "centre",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ち",
+      "ゅ",
+      "う",
+      "ご",
+      "く"
+    ],
+    "romaji": "chuugoku",
+    "mean": "China",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ち",
+      "ゅ",
+      "う",
+      "し",
+      "ん"
+    ],
+    "romaji": "chuushin",
+    "mean": "center",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ち",
+      "ょ",
+      "う",
+      "か",
+      "ん"
+    ],
+    "romaji": "choukan",
+    "mean": "secretary (government)",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ち",
+      "ょ",
+      "う",
+      "せ",
+      "い"
+    ],
+    "romaji": "chousei",
+    "mean": "adjustment",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ち",
+      "ょ",
+      "う",
+      "な",
+      "ん"
+    ],
+    "romaji": "chounan",
+    "mean": "eldest son (may be the only son)",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "と",
+      "い",
+      "あ",
+      "わ",
+      "せ"
+    ],
+    "romaji": "toiawase",
+    "mean": "enquiry",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "と",
+      "う",
+      "き",
+      "ょ",
+      "う"
+    ],
+    "romaji": "toukyou",
+    "mean": "Tokyo",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "と",
+      "う",
+      "き",
+      "ょ",
+      "く"
+    ],
+    "romaji": "toukyoku",
+    "mean": "authorities",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "と",
+      "う",
+      "ひ",
+      "ょ",
+      "う"
+    ],
+    "romaji": "touhyou",
+    "mean": "voting",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "に",
+      "ほ",
+      "ん",
+      "じ",
+      "ん"
+    ],
+    "romaji": "nihonjin",
+    "mean": "Japanese person",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "の",
+      "う",
+      "ぎ",
+      "ょ",
+      "う"
+    ],
+    "romaji": "nougyou",
+    "mean": "agriculture",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ゆ",
+      "う",
+      "し",
+      "ょ",
+      "う"
+    ],
+    "romaji": "yuushou",
+    "mean": "overall victory",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "よ",
+      "う",
+      "ぎ",
+      "し",
+      "ゃ"
+    ],
+    "romaji": "yougisha",
+    "mean": "suspect (person)",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "よ",
+      "ん",
+      "じ",
+      "ゅ",
+      "う"
+    ],
+    "romaji": "yonjuu",
+    "mean": "forty",
+    "cat": "Number",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "り",
+      "ょ",
+      "う",
+      "こ",
+      "く"
+    ],
+    "romaji": "ryoukoku",
+    "mean": "both countries",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "い",
+      "い",
+      "ん",
+      "ち",
+      "ょ",
+      "う"
+    ],
+    "romaji": "iinchou",
+    "mean": "(committee) chairman",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "か",
+      "ん",
+      "け",
+      "い",
+      "し",
+      "ゃ"
+    ],
+    "romaji": "kankeisha",
+    "mean": "person concerned",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "が",
+      "い",
+      "こ",
+      "く",
+      "じ",
+      "ん"
+    ],
+    "romaji": "gaikokujin",
+    "mean": "foreigner",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "が",
+      "い",
+      "む",
+      "し",
+      "ょ",
+      "う"
+    ],
+    "romaji": "gaimushou",
+    "mean": "Ministry of Foreign Affairs",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "き",
+      "ょ",
+      "う",
+      "り",
+      "ょ",
+      "く"
+    ],
+    "romaji": "kyouryoku",
+    "mean": "cooperation",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "し",
+      "ゃ",
+      "か",
+      "い",
+      "と",
+      "う"
+    ],
+    "romaji": "shakaitou",
+    "mean": "Socialist Party",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "じ",
+      "ゅ",
+      "う",
+      "き",
+      "ゅ",
+      "う"
+    ],
+    "romaji": "juukyuu",
+    "mean": "19",
+    "cat": "Number",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "じ",
+      "ゅ",
+      "う",
+      "に",
+      "が",
+      "つ"
+    ],
+    "romaji": "juunigatsu",
+    "mean": "December",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "じ",
+      "ょ",
+      "う",
+      "き",
+      "ょ",
+      "う"
+    ],
+    "romaji": "joukyou",
+    "mean": "state of affairs (around you)",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "せ",
+      "ん",
+      "し",
+      "ゅ",
+      "け",
+      "ん"
+    ],
+    "romaji": "senshuken",
+    "mean": "championship",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "そ",
+      "う",
+      "せ",
+      "ん",
+      "き",
+      "ょ"
+    ],
+    "romaji": "sousenkyo",
+    "mean": "general election (of the lower house)",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ほ",
+      "っ",
+      "か",
+      "い",
+      "ど",
+      "う"
+    ],
+    "romaji": "hokkaidou",
+    "mean": "Hokkaido (island, prefectural-level…",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "あ",
+      "い"
+    ],
+    "romaji": "ai",
+    "mean": "love",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "う",
+      "た"
+    ],
+    "romaji": "uta",
+    "mean": "song",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "お",
+      "と"
+    ],
+    "romaji": "oto",
+    "mean": "sound",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "お",
+      "や"
+    ],
+    "romaji": "oya",
+    "mean": "parent",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "か",
+      "く"
+    ],
+    "romaji": "kaku",
+    "mean": "stone (of a fruit)",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "か",
+      "ず"
+    ],
+    "romaji": "kazu",
+    "mean": "number",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "か",
+      "べ"
+    ],
+    "romaji": "kabe",
+    "mean": "wall",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "き",
+      "そ"
+    ],
+    "romaji": "kiso",
+    "mean": "foundation",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "き",
+      "ち"
+    ],
+    "romaji": "kichi",
+    "mean": "base (military, expedition, etc.)",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ぐ",
+      "ん"
+    ],
+    "romaji": "gun",
+    "mean": "army",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "し",
+      "る"
+    ],
+    "romaji": "shiru",
+    "mean": "to be aware of",
+    "cat": "Verb",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "じ",
+      "ち"
+    ],
+    "romaji": "jichi",
+    "mean": "self-government",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "せ",
+      "き"
+    ],
+    "romaji": "seki",
+    "mean": "barrier",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "そ",
+      "と"
+    ],
+    "romaji": "soto",
+    "mean": "outside",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "つ",
+      "ら"
+    ],
+    "romaji": "tsura",
+    "mean": "face",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "と",
+      "う"
+    ],
+    "romaji": "tou",
+    "mean": "party (political)",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "な",
+      "に"
+    ],
+    "romaji": "nani",
+    "mean": "what",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "に",
+      "し"
+    ],
+    "romaji": "nishi",
+    "mean": "west",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "は",
+      "く"
+    ],
+    "romaji": "haku",
+    "mean": "doctor",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "は",
+      "ば"
+    ],
+    "romaji": "haba",
+    "mean": "width",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ぶ",
+      "き"
+    ],
+    "romaji": "buki",
+    "mean": "weapon",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ゆ",
+      "う"
+    ],
+    "romaji": "yuu",
+    "mean": "evening",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "ゆ",
+      "め"
+    ],
+    "romaji": "yume",
+    "mean": "dream",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "よ",
+      "ぶ"
+    ],
+    "romaji": "yobu",
+    "mean": "to call out (to)",
+    "cat": "Verb",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "れ",
+      "い"
+    ],
+    "romaji": "rei",
+    "mean": "custom",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "あ",
+      "か",
+      "じ"
+    ],
+    "romaji": "akaji",
+    "mean": "(being in) the red",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "い",
+      "が",
+      "く"
+    ],
+    "romaji": "igaku",
+    "mean": "medical science",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "い",
+      "し",
+      "き"
+    ],
+    "romaji": "ishiki",
+    "mean": "consciousness",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "い",
+      "な",
+      "い"
+    ],
+    "romaji": "inai",
+    "mean": "within",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "え",
+      "い",
+      "ご"
+    ],
+    "romaji": "eigo",
+    "mean": "English (language)",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "え",
+      "ら",
+      "ぶ"
+    ],
+    "romaji": "erabu",
+    "mean": "to choose",
+    "cat": "Verb",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "お",
+      "そ",
+      "れ"
+    ],
+    "romaji": "osore",
+    "mean": "fear",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "お",
+      "も",
+      "い"
+    ],
+    "romaji": "omoi",
+    "mean": "thought",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "お",
+      "も",
+      "う"
+    ],
+    "romaji": "omou",
+    "mean": "to think",
+    "cat": "Verb",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "か",
+      "い",
+      "し"
+    ],
+    "romaji": "kaishi",
+    "mean": "start",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "か",
+      "が",
+      "く"
+    ],
+    "romaji": "kagaku",
+    "mean": "science",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "か",
+      "く",
+      "ぎ"
+    ],
+    "romaji": "kakugi",
+    "mean": "cabinet meeting",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "か",
+      "く",
+      "ほ"
+    ],
+    "romaji": "kakuho",
+    "mean": "securing",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "か",
+      "ぶ",
+      "か"
+    ],
+    "romaji": "kabuka",
+    "mean": "stock prices",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "か",
+      "ら",
+      "だ"
+    ],
+    "romaji": "karada",
+    "mean": "body",
+    "cat": "Noun",
+    "emoji": ""
+  },
+  {
+    "kana": [
+      "か",
+      "れ",
+      "ら"
+    ],
+    "romaji": "karera",
+    "mean": "they",
+    "cat": "Noun",
+    "emoji": ""
+  }
 ]

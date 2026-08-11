@@ -818,6 +818,18 @@ body {
   align-items: center;
 }
 
+.ym-credit {
+  margin-top: 16px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--ink-faint);
+  text-align: center;
+}
+.ym-credit a {
+  color: var(--ink-soft);
+  text-decoration: underline;
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;

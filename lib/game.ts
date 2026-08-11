@@ -24,8 +24,9 @@ export interface Word {
   cat: string;
   /** Optional emoji hint; empty for abstract words. */
   emoji?: string;
-  exJp: string;
-  exTr: string;
+  /** Optional example sentence (JP) + translation; empty for bulk entries. */
+  exJp?: string;
+  exTr?: string;
 }
 
 export interface CurriculumBand {

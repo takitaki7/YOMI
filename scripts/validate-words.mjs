@@ -18,7 +18,7 @@ const REACHABLE = new Set([...BASE, ...DAK, ...HAN, ...SMALL]);
 
 let errors = 0;
 let total = 0;
-const romajiSeen = new Map();
+const kanaSeen = new Map();
 
 for (let y = 1; y <= 10; y++) {
   const file = join(DATA, `words.year${y}.json`);
@@ -38,7 +38,9 @@ for (let y = 1; y <= 10; y++) {
   arr.forEach((w, i) => {
     total++;
     const at = `year${y}[${i}] (${w.romaji || "?"})`;
-    for (const field of ["kana", "romaji", "mean", "cat", "exJp", "exTr"]) {
+    // Required on every entry. Examples (exJp/exTr) are optional — bulk
+    // dictionary entries ship without a hand-written sentence.
+    for (const field of ["kana", "romaji", "mean", "cat"]) {
       if (w[field] === undefined || w[field] === null || w[field] === "") {
         console.error(`${at}: missing "${field}"`);
         errors++;
@@ -52,22 +54,22 @@ for (let y = 1; y <= 10; y++) {
         }
       });
       const joined = w.kana.join("");
-      if (!w.exJp || !w.exJp.includes(joined)) {
+      // When an example is present, it must actually contain the word.
+      if (w.exJp && !w.exJp.includes(joined)) {
         console.error(`${at}: example "${w.exJp}" does not contain the word "${joined}"`);
         errors++;
+      }
+      // The puzzle identity is the kana string — that's what must be unique.
+      const prev = kanaSeen.get(joined);
+      if (prev) {
+        console.error(`${at}: duplicate word "${joined}", also in ${prev}`);
+        errors++;
+      } else {
+        kanaSeen.set(joined, at);
       }
     } else {
       console.error(`${at}: "kana" must be an array`);
       errors++;
-    }
-    if (w.romaji) {
-      const prev = romajiSeen.get(w.romaji);
-      if (prev) {
-        console.error(`${at}: duplicate romaji, also in ${prev}`);
-        errors++;
-      } else {
-        romajiSeen.set(w.romaji, at);
-      }
     }
   });
 }

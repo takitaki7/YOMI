@@ -88,6 +88,32 @@ Each word lives in `data/words.year{N}.json`:
 Review checklist when generating words: kana-array correctness, romaji, meaning, natural
 example sentence, difficulty-band fit, and de-duplication.
 
+`exJp` / `exTr` are **optional** — the ~230 hand-curated words carry example sentences;
+the bulk dictionary entries don't (the reveal simply hides the example box). Run
+`npm run validate` after any change: it checks every kana tile is keyboard-reachable,
+required fields are present, examples (when present) contain the word, and no two entries
+share the same kana string.
+
+### How the 3,000 words were built
+
+Each year holds ~300 words = the hand-curated set first (nice examples, tight difficulty
+fit) followed by a frequency-ranked bulk set drawn from **JMdict**: readings filtered to
+pure keyboard-reachable hiragana, romaji generated deterministically with `wanakana`,
+meanings from the dictionary gloss, and words ordered by corpus frequency so common words
+land in the early years. The generator isn't committed as a runtime dependency — see the
+handoff notes; re-running it just needs the JMdict data + `wanakana`.
+
+## Data & licensing
+
+Bulk word data is derived from **JMdict**, © the [Electronic Dictionary Research and
+Development Group (EDRDG)](https://www.edrdg.org/), used under the **Creative Commons
+Attribution-ShareAlike 4.0** licence. Attribution is shown in the app's How-to-play panel.
+
+> **Note for productionization:** JMdict is CC BY-SA, and *ShareAlike* can carry
+> obligations for a derivative dataset in a proprietary/acquired product. Attribution is in
+> place; the ShareAlike terms are worth a licensing review before a commercial exit (or
+> swap the bulk set for a differently-licensed source / your own curated list).
+
 ---
 
 ## Deploying to Vercel
@@ -126,8 +152,16 @@ online) and cache-first for static assets (works offline after the first visit).
 - Help modal, mini-stats, keyboard focus states, reduced-motion support.
 - Analytics hook point (no third-party sends by default — wire a sink when ready).
 
+- **3,000-word curriculum** — 300 words per year: hand-curated basics (with example
+  sentences) plus a frequency-ranked JMdict bulk set, all validated.
+- **10-word warm-up** for brand-new players before the one-a-day cadence begins.
+
 **Remaining (production runway)**
 
-- Grow each year's pool toward ~365 words (currently seeded; years 1–3 expanded).
+- Enrich bulk entries with example sentences and emoji over time (currently curated words
+  only); tidy glosses where JMdict is terse.
+- Consider lazy-loading word data (all 3,000 currently ship in the first load, ~+48 KB
+  gz) — e.g. a per-day static payload or an API route.
+- Resolve the JMdict ShareAlike question for a commercial exit (see Data & licensing).
 - Wire the analytics sink to a real provider (Vercel Analytics / Plausible / custom).
 - Optional future: cross-device sync (Vercel KV), katakana/kanji modes.
