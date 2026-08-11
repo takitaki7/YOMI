@@ -13,7 +13,7 @@ export type AnalyticsEvent =
   | { name: "play_start"; day: number; year: number }
   | { name: "guess"; day: number; n: number }
   | { name: "resolve"; day: number; win: boolean; guesses: number }
-  | { name: "share"; day: number; channel: "x" | "ig" | "fb" | "tt" | "native" };
+  | { name: "share"; day: number; channel: "native" | "clipboard" };
 
 type Sink = (event: AnalyticsEvent) => void;
 

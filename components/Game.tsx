@@ -246,56 +246,37 @@ export default function Game() {
     return () => document.removeEventListener("keydown", onKey);
   }, [backspace, submit, cur, done, puzzle, showSheet, showHelp]);
 
-  /* ---- share ---- */
-  const openShare = useCallback(
-    (kind: "x" | "ig" | "fb" | "tt") => {
-      if (!puzzle) return;
-      const text = shareText({
-        dayIndex,
-        levelName: puzzle.name,
-        results,
-        streak: save.streak,
-      });
-      track({ name: "share", day: dayIndex, channel: kind });
+  /* ---- share (Wordle-style: one button, native sheet + clipboard fallback) ---- */
+  const share = useCallback(async () => {
+    if (!puzzle) return;
+    const text = shareText({ dayIndex, results }) + "\n\n" + SHARE_URL;
 
-      const copy = () => {
-        if (navigator.clipboard) {
-          navigator.clipboard.writeText(text + "\n" + SHARE_URL).catch(() => {});
-        }
-      };
-
-      if (kind === "x") {
-        window.open(
-          "https://twitter.com/intent/tweet?text=" +
-            encodeURIComponent(text + "\n") +
-            "&url=" +
-            encodeURIComponent(SHARE_URL),
-          "_blank",
-          "noopener,noreferrer,width=600,height=560"
-        );
-      } else if (kind === "fb") {
-        window.open(
-          "https://www.facebook.com/sharer/sharer.php?u=" +
-            encodeURIComponent(SHARE_URL) +
-            "&quote=" +
-            encodeURIComponent(text),
-          "_blank",
-          "noopener,noreferrer,width=600,height=560"
-        );
-      } else if (kind === "ig") {
-        // Instagram has no web text/link intent — copy and open the app/site.
-        copy();
-        window.open("https://www.instagram.com/", "_blank", "noopener,noreferrer");
-        toast("Result copied — paste into your Instagram story");
-      } else {
-        // TikTok has no web share intent; opening tiktok.com is just noise, so
-        // copy the result and let the player paste it into their own post.
-        copy();
-        toast("Result copied — paste it into your TikTok post");
+    // Mobile / supporting browsers: the native share sheet → send anywhere.
+    if (typeof navigator !== "undefined" && navigator.share) {
+      try {
+        await navigator.share({ text });
+        track({ name: "share", day: dayIndex, channel: "native" });
+        return;
+      } catch (e) {
+        // User dismissed the sheet — do nothing further.
+        if (e && (e as { name?: string }).name === "AbortError") return;
+        // Otherwise fall through to clipboard.
       }
-    },
-    [dayIndex, puzzle, results, save.streak, toast]
-  );
+    }
+
+    // Desktop fallback: copy the block and confirm.
+    if (typeof navigator !== "undefined" && navigator.clipboard) {
+      try {
+        await navigator.clipboard.writeText(text);
+        track({ name: "share", day: dayIndex, channel: "clipboard" });
+        toast("Copied results to clipboard");
+        return;
+      } catch {
+        /* ignore */
+      }
+    }
+    toast("Sharing isn't available here");
+  }, [dayIndex, puzzle, results, toast]);
 
   /* ---- derived state ---- */
   const onbActive = mode === "onboarding";
@@ -549,47 +530,14 @@ export default function Game() {
               </div>
             )}
 
-            <div className="ym-sharelabel">Share your result</div>
-            <div className="ym-share-grid">
-              <button className="ym-sbtn x" aria-label="Share on X" onClick={() => openShare("x")}>
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.58-6.64 7.58H.46l8.6-9.83L0 1.15h7.59l5.24 6.93 6.07-6.93Zm-1.29 19.5h2.04L6.48 3.24H4.29L17.61 20.65Z" />
-                </svg>
-                <span>X</span>
-              </button>
-              <button
-                className="ym-sbtn ig"
-                aria-label="Share on Instagram"
-                onClick={() => openShare("ig")}
-              >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <rect x="2" y="2" width="20" height="20" rx="5.5" />
-                  <circle cx="12" cy="12" r="4.2" />
-                  <circle cx="17.4" cy="6.6" r="1.2" fill="currentColor" stroke="none" />
-                </svg>
-                <span>Instagram</span>
-              </button>
-              <button
-                className="ym-sbtn fb"
-                aria-label="Share on Facebook"
-                onClick={() => openShare("fb")}
-              >
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07Z" />
-                </svg>
-                <span>Facebook</span>
-              </button>
-              <button
-                className="ym-sbtn tt"
-                aria-label="Share on TikTok"
-                onClick={() => openShare("tt")}
-              >
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M16.6 5.82a4.28 4.28 0 0 1-1.06-2.82h-3.2v12.9a2.6 2.6 0 0 1-2.6 2.5 2.6 2.6 0 1 1 .76-5.09V7.99a5.85 5.85 0 0 0-.76-.05A5.8 5.8 0 1 0 15.34 13.75V8.66a7.5 7.5 0 0 0 4.4 1.41V6.87a4.28 4.28 0 0 1-3.14-1.05Z" />
-                </svg>
-                <span>TikTok</span>
-              </button>
-            </div>
+            <button className="ym-share" onClick={share}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 3v13" />
+                <path d="M7 8l5-5 5 5" />
+                <path d="M5 14v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5" />
+              </svg>
+              Share
+            </button>
 
             {onbMore ? (
               <button
