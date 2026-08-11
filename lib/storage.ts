@@ -35,6 +35,10 @@ export interface SaveState {
   bestStreak: number;
   /** The current/last day's board. */
   progress: DayProgress | null;
+  /** How many first-session warm-up words the user has completed. */
+  onboardingIndex: number;
+  /** True once the warm-up is finished; from then on it's one word a day. */
+  onboardingDone: boolean;
 }
 
 export function defaultState(): SaveState {
@@ -48,6 +52,8 @@ export function defaultState(): SaveState {
     dist: [0, 0, 0, 0, 0, 0],
     bestStreak: 0,
     progress: null,
+    onboardingIndex: 0,
+    onboardingDone: false,
   };
 }
 
@@ -112,5 +118,47 @@ export function recordResolution(
     wins: prev.wins + (win ? 1 : 0),
     dist,
     progress,
+  };
+}
+
+/**
+ * Fold a resolved warm-up word into the state. Streak increments per solved
+ * word (a loss resets it). When the target is reached, onboarding ends and
+ * today's daily is marked resolved so the player then joins the one-a-day
+ * cadence, with streak anchored so tomorrow's win keeps it going.
+ */
+export function recordOnboarding(
+  prev: SaveState,
+  win: boolean,
+  guessCount: number,
+  target: number,
+  realDay: number
+): SaveState {
+  const onboardingIndex = prev.onboardingIndex + 1;
+  const onboardingDone = onboardingIndex >= target;
+  const streak = win ? prev.streak + 1 : 0;
+
+  const dist = prev.dist.slice();
+  if (win && guessCount >= 1 && guessCount <= dist.length) {
+    dist[guessCount - 1] += 1;
+  }
+
+  return {
+    ...prev,
+    streak,
+    bestStreak: Math.max(prev.bestStreak, streak),
+    played: prev.played + 1,
+    wins: prev.wins + (win ? 1 : 0),
+    dist,
+    onboardingIndex,
+    onboardingDone,
+    // On finishing the warm-up, lock today's daily and anchor the streak to
+    // today so tomorrow's win continues it seamlessly. The done marker keeps
+    // the lock across reloads.
+    lastResolvedDay: onboardingDone ? realDay : prev.lastResolvedDay,
+    lastWinDay: onboardingDone ? (win ? realDay : prev.lastWinDay) : prev.lastWinDay,
+    progress: onboardingDone
+      ? { day: realDay, guesses: [], results: [], done: true, win }
+      : null,
   };
 }

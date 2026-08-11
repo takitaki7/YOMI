@@ -18,6 +18,7 @@ import {
 import {
   defaultState,
   loadState,
+  recordOnboarding,
   recordResolution,
   saveState,
   type DayProgress,
@@ -25,7 +26,14 @@ import {
 } from "@/lib/storage";
 import { track } from "@/lib/analytics";
 
-const SHARE_URL = "https://yomi.game";
+// Share to the live site. Overridable via env for a future custom domain.
+const SHARE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://yomi-ten-wheat.vercel.app";
+
+// A brand-new player gets a warm-up of this many words back-to-back before the
+// one-word-a-day cadence begins — a stronger first session than a single word.
+const ONBOARDING_TARGET = 10;
+
+type Mode = "onboarding" | "daily";
 
 function formatCountdown(ms: number): string {
   const total = Math.max(0, Math.floor(ms / 1000));
@@ -39,6 +47,8 @@ function formatCountdown(ms: number): string {
 export default function Game() {
   const [mounted, setMounted] = useState(false);
   const [dayIndex, setDayIndex] = useState(0);
+  const [mode, setMode] = useState<Mode>("daily");
+  const [onbIndex, setOnbIndex] = useState(0);
   const [puzzle, setPuzzle] = useState<Puzzle | null>(null);
 
   const [cur, setCur] = useState<string[]>([]);
@@ -64,57 +74,74 @@ export default function Game() {
     toastTimer.current = setTimeout(() => setToastMsg(""), 2400);
   }, []);
 
-  /* ---- load / start a given day ---- */
-  const beginDay = useCallback((di: number, prior: SaveState) => {
-    const pz = puzzleForDay(di);
-    setDayIndex(di);
-    setPuzzle(pz);
-    const p = prior.progress;
-    if (p && p.day === di) {
-      // restore an in-progress or finished board for today
-      setGuesses(p.guesses);
-      setResults(p.results);
-      setDone(p.done);
-      setWin(p.win);
-      setCur([]);
-      setShowSheet(false);
-    } else {
-      setGuesses([]);
-      setResults([]);
-      setDone(false);
-      setWin(false);
-      setCur([]);
-      setShowSheet(false);
-      track({ name: "play_start", day: di, year: pz.year });
-    }
+  const resetBoard = useCallback(() => {
+    setGuesses([]);
+    setResults([]);
+    setCur([]);
+    setDone(false);
+    setWin(false);
+    setShowSheet(false);
   }, []);
+
+  /* ---- decide onboarding vs daily and load the right puzzle ---- */
+  const start = useCallback(
+    (prior: SaveState) => {
+      const di = dayIndexForDate();
+      setDayIndex(di);
+
+      if (!prior.onboardingDone) {
+        const oi = Math.min(prior.onboardingIndex, ONBOARDING_TARGET - 1);
+        const pz = puzzleForDay(oi);
+        setMode("onboarding");
+        setOnbIndex(oi);
+        setPuzzle(pz);
+        resetBoard();
+        track({ name: "play_start", day: oi, year: pz.year });
+        return;
+      }
+
+      setMode("daily");
+      const pz = puzzleForDay(di);
+      setPuzzle(pz);
+      const p = prior.progress;
+      if (p && p.day === di) {
+        setGuesses(p.guesses);
+        setResults(p.results);
+        setDone(p.done);
+        setWin(p.win);
+        setCur([]);
+        setShowSheet(false);
+      } else {
+        resetBoard();
+        track({ name: "play_start", day: di, year: pz.year });
+      }
+    },
+    [resetBoard]
+  );
 
   useEffect(() => {
     const s = loadState();
     setSave(s);
-    const di = dayIndexForDate();
-    beginDay(di, s);
+    start(s);
     setCountdown(msUntilNextPuzzle());
     setMounted(true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  /* ---- countdown tick + midnight rollover ---- */
+  /* ---- countdown tick + midnight rollover (daily mode only) ---- */
   useEffect(() => {
     if (!mounted) return;
     const id = setInterval(() => {
-      const ms = msUntilNextPuzzle();
-      setCountdown(ms);
+      setCountdown(msUntilNextPuzzle());
       const di = dayIndexForDate();
-      if (di !== dayIndex) {
-        // A new day began while the tab was open — roll over to it.
+      if (mode === "daily" && di !== dayIndex) {
         const fresh = loadState();
         setSave(fresh);
-        beginDay(di, fresh);
+        start(fresh);
       }
     }, 1000);
     return () => clearInterval(id);
-  }, [mounted, dayIndex, beginDay]);
+  }, [mounted, dayIndex, mode, start]);
 
   /* ---- input handlers ---- */
   const place = useCallback(
@@ -161,35 +188,50 @@ export default function Game() {
     const solved = res.every((x) => x === "correct");
     const out = solved || nextGuesses.length >= MAX_GUESSES;
 
-    const progress: DayProgress = {
-      day: dayIndex,
-      guesses: nextGuesses,
-      results: nextResults,
-      done: out,
-      win: solved,
-    };
-
     if (out) {
       setDone(true);
       setWin(solved);
-      const updated = recordResolution(
-        save,
-        dayIndex,
-        solved,
-        nextGuesses.length,
-        progress
-      );
+      let updated: SaveState;
+      if (mode === "onboarding") {
+        updated = recordOnboarding(save, solved, nextGuesses.length, ONBOARDING_TARGET, dayIndex);
+      } else {
+        const progress: DayProgress = {
+          day: dayIndex,
+          guesses: nextGuesses,
+          results: nextResults,
+          done: true,
+          win: solved,
+        };
+        updated = recordResolution(save, dayIndex, solved, nextGuesses.length, progress);
+      }
       setSave(updated);
       saveState(updated);
       track({ name: "resolve", day: dayIndex, win: solved, guesses: nextGuesses.length });
       setTimeout(() => setShowSheet(true), 640);
-    } else {
-      // persist in-progress board so a refresh keeps completed rows
+    } else if (mode === "daily") {
+      // persist in-progress daily board so a refresh keeps completed rows
+      const progress: DayProgress = {
+        day: dayIndex,
+        guesses: nextGuesses,
+        results: nextResults,
+        done: false,
+        win: false,
+      };
       const updated = { ...save, progress };
       setSave(updated);
       saveState(updated);
     }
-  }, [cur, done, guesses, results, dayIndex, puzzle, save]);
+  }, [cur, done, guesses, results, dayIndex, puzzle, save, mode]);
+
+  const nextOnboardingWord = useCallback(() => {
+    const next = onbIndex + 1;
+    if (next >= ONBOARDING_TARGET) return;
+    const pz = puzzleForDay(next);
+    setOnbIndex(next);
+    setPuzzle(pz);
+    resetBoard();
+    track({ name: "play_start", day: next, year: pz.year });
+  }, [onbIndex, resetBoard]);
 
   /* ---- physical keyboard: Enter / Backspace ---- */
   useEffect(() => {
@@ -215,38 +257,52 @@ export default function Game() {
         streak: save.streak,
       });
       track({ name: "share", day: dayIndex, channel: kind });
-      let href = "";
-      if (kind === "x") {
-        href =
-          "https://twitter.com/intent/tweet?text=" +
-          encodeURIComponent(text + "\n") +
-          "&url=" +
-          encodeURIComponent(SHARE_URL);
-      } else if (kind === "fb") {
-        href =
-          "https://www.facebook.com/sharer/sharer.php?u=" +
-          encodeURIComponent(SHARE_URL) +
-          "&quote=" +
-          encodeURIComponent(text);
-      } else {
-        // Instagram & TikTok have no web share-intent for text/links, so copy
-        // the result and open the app/site — the standard pattern for these two.
+
+      const copy = () => {
         if (navigator.clipboard) {
           navigator.clipboard.writeText(text + "\n" + SHARE_URL).catch(() => {});
         }
-        toast(
-          kind === "ig"
-            ? "Result copied — paste into your Instagram story"
-            : "Result copied — paste into your TikTok post"
+      };
+
+      if (kind === "x") {
+        window.open(
+          "https://twitter.com/intent/tweet?text=" +
+            encodeURIComponent(text + "\n") +
+            "&url=" +
+            encodeURIComponent(SHARE_URL),
+          "_blank",
+          "noopener,noreferrer,width=600,height=560"
         );
-        href = kind === "ig" ? "https://www.instagram.com/" : "https://www.tiktok.com/";
+      } else if (kind === "fb") {
+        window.open(
+          "https://www.facebook.com/sharer/sharer.php?u=" +
+            encodeURIComponent(SHARE_URL) +
+            "&quote=" +
+            encodeURIComponent(text),
+          "_blank",
+          "noopener,noreferrer,width=600,height=560"
+        );
+      } else if (kind === "ig") {
+        // Instagram has no web text/link intent — copy and open the app/site.
+        copy();
+        window.open("https://www.instagram.com/", "_blank", "noopener,noreferrer");
+        toast("Result copied — paste into your Instagram story");
+      } else {
+        // TikTok has no web share intent; opening tiktok.com is just noise, so
+        // copy the result and let the player paste it into their own post.
+        copy();
+        toast("Result copied — paste it into your TikTok post");
       }
-      if (href) window.open(href, "_blank", "noopener,noreferrer,width=600,height=560");
     },
     [dayIndex, puzzle, results, save.streak, toast]
   );
 
-  /* ---- derived board rows ---- */
+  /* ---- derived state ---- */
+  const onbActive = mode === "onboarding";
+  const onbMore = onbActive && done && save.onboardingIndex < ONBOARDING_TARGET;
+  const locked = done && !onbMore; // daily done, or warm-up complete
+  const onbComplete = onbActive && locked;
+
   const boardRows = useMemo(() => {
     if (!puzzle) return [];
     const rows: {
@@ -317,8 +373,17 @@ export default function Game() {
 
         {mounted && puzzle ? (
           <div className="ym-tag">
-            Day <span className="day">{dayIndex + 1}</span> ·{" "}
-            <span className="ym-level">Year {puzzle.year}</span> · <span>{puzzle.name}</span>
+            {onbActive ? (
+              <>
+                <span className="ym-level">Warm-up</span> · Word{" "}
+                <span className="day">{onbIndex + 1}</span> of {ONBOARDING_TARGET}
+              </>
+            ) : (
+              <>
+                Day <span className="day">{dayIndex + 1}</span> ·{" "}
+                <span className="ym-level">Year {puzzle.year}</span>
+              </>
+            )}
           </div>
         ) : (
           <div className="ym-tag">&nbsp;</div>
@@ -327,7 +392,6 @@ export default function Game() {
         {mounted && puzzle && (
           <>
             <div className="ym-clue">
-              <div className="ym-cat">{puzzle.w.cat}</div>
               <div className="ym-mean-label">Spell this word in hiragana</div>
               <div className="ym-mean">
                 <span>{puzzle.w.mean}</span>
@@ -359,11 +423,27 @@ export default function Game() {
               ))}
             </div>
 
-            {done ? (
+            {onbMore ? (
+              <div className="ym-done glass">
+                <div className="title">{win ? "Nice!" : "Good try."}</div>
+                <div className="sub">
+                  Warm-up round — {ONBOARDING_TARGET - save.onboardingIndex} more{" "}
+                  {ONBOARDING_TARGET - save.onboardingIndex === 1 ? "word" : "words"} to go.
+                </div>
+                <button className="ym-next" onClick={nextOnboardingWord}>
+                  Next word →
+                </button>
+                <button className="ym-next" onClick={() => setShowSheet(true)}>
+                  View this word
+                </button>
+              </div>
+            ) : locked ? (
               <div className="ym-done glass">
                 <div className="title">{win ? "Solved for today." : "That's today's word."}</div>
                 <div className="sub">
-                  One word a day. Come back tomorrow for the next puzzle and keep your streak going.
+                  {onbComplete
+                    ? "Warm-up complete! From now on it's one new word a day — come back tomorrow and keep your streak going."
+                    : "One word a day. Come back tomorrow for the next puzzle and keep your streak going."}
                 </div>
                 <div className="clock">{formatCountdown(countdown)}</div>
                 <div className="clocklabel">Next word in</div>
@@ -461,9 +541,11 @@ export default function Game() {
               </div>
             </div>
 
-            <div className="ym-countdown">
-              Next word in <b>{formatCountdown(countdown)}</b>
-            </div>
+            {!onbMore && (
+              <div className="ym-countdown">
+                Next word in <b>{formatCountdown(countdown)}</b>
+              </div>
+            )}
 
             <div className="ym-sharelabel">Share your result</div>
             <div className="ym-share-grid">
@@ -507,9 +589,21 @@ export default function Game() {
               </button>
             </div>
 
-            <button className="ym-next" onClick={() => setShowSheet(false)}>
-              Close
-            </button>
+            {onbMore ? (
+              <button
+                className="ym-next"
+                onClick={() => {
+                  setShowSheet(false);
+                  nextOnboardingWord();
+                }}
+              >
+                Next word →
+              </button>
+            ) : (
+              <button className="ym-next" onClick={() => setShowSheet(false)}>
+                Close
+              </button>
+            )}
           </div>
         </div>
       )}
